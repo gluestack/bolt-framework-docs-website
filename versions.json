@@ -1,0 +1,148 @@
+{
+  "versions": [
+    {
+      "version": "0.1.x",
+      "pages": [
+        {
+          "type": "heading",
+          "title": "advanced",
+          "pages": [
+            {
+              "title": "Architecture",
+              "pages": [],
+              "id": "/docs/advanced/architecture"
+            },
+            {
+              "title": "Babel Plugins",
+              "pages": [],
+              "id": "/docs/advanced/babel-plugins"
+            },
+            {
+              "title": "Specificity",
+              "pages": [],
+              "id": "/docs/advanced/specificity"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "title": "api",
+          "pages": [
+            {
+              "title": "ColorMode Based Styles",
+              "pages": [],
+              "id": "/docs/api/color-mode-based-styles"
+            },
+            {
+              "title": "Descendants Styles",
+              "pages": [],
+              "id": "/docs/api/descendants-styles"
+            },
+            {
+              "title": "Overriding Styles",
+              "pages": [],
+              "id": "/docs/api/overriding-styles"
+            },
+            {
+              "title": "Platform Based Styles",
+              "pages": [],
+              "id": "/docs/api/platform-based-styles"
+            },
+            {
+              "title": "Property Resolver",
+              "pages": [],
+              "id": "/docs/api/property-resolver"
+            },
+            {
+              "title": "Responsive Styles",
+              "pages": [],
+              "id": "/docs/api/responsive-styles"
+            },
+            {
+              "title": "Specificity",
+              "pages": [],
+              "id": "/docs/api/specificity"
+            },
+            {
+              "title": "State Bases Styles",
+              "pages": [],
+              "id": "/docs/api/state-bases-styles"
+            },
+            {
+              "title": "Typescript",
+              "pages": [],
+              "id": "/docs/api/typescript"
+            },
+            { "title": "Variants", "pages": [], "id": "/docs/api/variants" }
+          ]
+        },
+        {
+          "type": "heading",
+          "title": "configuration",
+          "pages": [
+            {
+              "title": "Breakpoints",
+              "pages": [],
+              "id": "/docs/configuration/breakpoints"
+            },
+            {
+              "title": "Custom Theming",
+              "pages": [],
+              "id": "/docs/configuration/custom-theming"
+            },
+            { "title": "SSR", "pages": [], "id": "/docs/configuration/ssr" },
+            {
+              "title": "Theme Tokens",
+              "pages": [],
+              "id": "/docs/configuration/theme-tokens"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "title": "Getting Started",
+          "pages": [
+            {
+              "title": "Installation",
+              "pages": [],
+              "id": "/docs/getting-started/installation"
+            },
+            {
+              "title": "Styled",
+              "pages": [],
+              "id": "/docs/getting-started/styled"
+            },
+            {
+              "title": "StyledProvider",
+              "pages": [],
+              "id": "/docs/getting-started/styled-provider"
+            },
+            {
+              "title": "TypeScript",
+              "pages": [],
+              "id": "/docs/getting-started/type-script"
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "title": "Overview",
+          "pages": [
+            { "title": "API", "pages": [], "id": "/docs/overview/api" },
+            {
+              "title": "Introduction",
+              "pages": [],
+              "id": "/docs/overview/indroduction"
+            },
+            {
+              "title": "Performance",
+              "pages": [],
+              "id": "/docs/overview/performance"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "firstPage": "/docs/advanced/architecture"
+}

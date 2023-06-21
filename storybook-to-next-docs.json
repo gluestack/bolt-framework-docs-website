@@ -1,0 +1,18 @@
+{
+  "meta": {},
+  "repos": [
+    {
+      "id": "gluestack-style",
+      "gitUrl": "https://github.com/gluestack/gluestack-style.git",
+      "previewJSPath": "example/storybook/.storybook/preview.js",
+      "docsPath": "example/storybook/src",
+      "branchName": "main",
+      "assetsPath": "example/storybook/public/assets",
+      "repoName": "gluestack-style",
+      "rootDocs": false,
+      "ignoredfolders": [],
+      "destinationPath": "/docs",
+      "firstPage": "/docs/getting-started/installation"
+    }
+  ]
+}

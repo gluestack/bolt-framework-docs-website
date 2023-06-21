@@ -1,0 +1,44 @@
+name: Create PR on Storyboook updated push on master | Accept trigger dispatch
+
+# Controls when the action will run. Triggers the workflow on repository_dispatch and filters by type of event (i.e. `event_type`)
+on:
+  repository_dispatch:
+    types: [dispatch_gluestack_style_storybook_updated]
+  # push:
+  #   branches:
+  #     - development
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: Print Repo Name
+        run: echo ${{ github.event.client_payload.message.repo }}
+
+      - name: Update docs and change timestamp in package json
+        run: |
+          yarn
+          yarn update-last-storybook-updated-timestamp
+
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.MY_GITHUB_TOKEN }}
+          branch: feat/${{ github.event.repository.name }}-${{ github.run_id }}
+          message: "Auto add updated docs"
+
+      - name: Run the Action
+        uses: devops-infra/action-pull-request@v0.5.3
+        with:
+          github_token: ${{ secrets.MY_GITHUB_TOKEN }}
+          source_branch: feat/${{ github.event.repository.name }}-${{ github.run_id }}
+          target_branch: main
+          title: Docs updated ${{ github.event.client_payload.message.repo }}
+          body: "**Automated pull request**"

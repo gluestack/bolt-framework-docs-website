@@ -1,0 +1,7 @@
+.btn{
+    @apply text-center transition-transform transform rounded-lg font-display ring-offset-1 group-hover:-translate-y-1 group-hover:-translate-x-1 group-focus:-translate-y-1 group-focus:-translate-x-1 ring-1;
+}
+
+.btnWrapper {
+    @apply border focus:outline-none inline-flex rounded-lg;
+}

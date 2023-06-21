@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+/* 
+@import "./button.css";
+@import "./tags.css";
+@import "./modal.css";
+@import "./header.css";
+@import "./herosection.css";
+@import "./card.css";
+@import "./search.css";
+@import "./testimonial.css";
+@import "./footer.css";
+@import "./team/team.css";
+@import "./docs.css"; */
+
+@font-face {
+  font-family: "sf-pro-regular";
+  src: local("â˜º"),
+    url("/fonts/sf-pro/FontsFree-Net-SFProDisplay-Regular.woff2")
+      format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "sf-pro-light";
+  src: local("â˜º"),
+    url("/fonts/sf-pro/FontsFree-Net-SFProDisplay-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "sf-pro-bold";
+  src: local("â˜º"),
+    url("/fonts/sf-pro/FontsFree-Net-SFProDisplay-Bold1.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "sf-pro-heavy";
+  src: local("â˜º"),
+    url("/fonts/sf-pro/FontsFree-Net-SFProDisplay-Heavy.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "sf-pro-semibold";
+  src: local("â˜º"),
+    url("/fonts/sf-pro/FontsFree-Net-SFProDisplay-Semibold.woff2")
+      format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+@font-face {
+  font-family: "sf-pro-boldItalic";
+  src: local("â˜º"),
+    url("/fonts/sf-pro/FontsFree-Net-SFProDisplay-BoldItalic.woff2")
+      format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  font-display: fallback;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+}
+
+@layer base {
+  html {
+  }
+  body {
+    overscroll-behavior: none;
+  }
+}
+
+/* For MarkDownText Link */
+/* .markdownview a{
+  color:#8944CE ;
+  text-decoration: none;
+} */
+/* For MarkDownText Link */
+
+.filter-primary {
+  filter: invert(34%) sepia(78%) saturate(5641%) hue-rotate(237deg)
+    brightness(104%) contrast(101%);
+}
+.filter-white {
+  filter: invert(98%) sepia(11%) saturate(198%) hue-rotate(61deg)
+    brightness(121%) contrast(100%);
+}
+
+.twitter > div {
+  @apply grid grid-cols-3 gap-6 py-6;
+}
+
+.fixed-layout {
+  min-height: calc(100vh - 168px);
+}
+.sm-container {
+  @apply max-w-[1120px];
+}
+
+/* .docs-layout h2,.docs-layout h1, .docs-layout p, .docs-layout h3, .docs-layout h4, .docs-layout h5, .docs-layout h6, .docs-layout li,
+.docs-layout strong{
+  @apply dark:text-gray;
+}
+.docs-layout code{
+  @apply dark:text-primary;
+} */
+
+.image-container {
+  width: 100%;
+}
+
+.image-container > div {
+  position: unset !important;
+}
+
+.image-container .image {
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+.gradient-dark {
+  background: linear-gradient(
+    89.93deg,
+    rgba(249, 249, 249, 0) 0.06%,
+    #f9f9f9 47.82%,
+    rgba(249, 249, 249, 0) 99.95%
+  );
+}
+.horizental-line:after {
+  content: "";
+  @apply bg-gray dark:bg-black-200 w-[4px] absolute top-0 bottom-0 left-0;
+}
+.dot:after {
+  content: "";
+  @apply absolute w-[18px] h-[18px] bg-gray-100 dark:bg-gray-600 -left-[55px] lg:-left-[103px] top-2 rounded-sm  z-10;
+}
+.dark-gradient {
+  background: linear-gradient(
+    89.93deg,
+    #232323 0.06%,
+    #323131 47.82%,
+    #232323 99.95%
+  );
+}
+
+body #c-bns button:first-child,
+body #s-bns button:first-child,
+body .cc_div .b-tg .c-tg {
+  @apply bg-primary hover:bg-primary;
+}
+body #c-bns button + button,
+body #s-c-bn,
+body #s-cnt button + button,
+body #s-bl .c-bl.b-ex,
+body .b-tl.exp {
+  @apply bg-gray hover:bg-gray;
+}
+#cc_div #cm {
+  @apply w-full max-w-full left-0 right-0 bottom-0 dark:bg-black dark:text-gray py-2;
+}
+body #cc_div #cm h3 {
+  @apply dark:text-gray;
+}
+#cm #c-inr {
+  @apply flex justify-between items-center max-[600px]:flex-col items-center;
+}
+#cm #c-inr #c-inr-i {
+  @apply flex-1;
+}
+body .cc_div #c-bns {
+  @apply m-0 max-[600px]:flex-row;
+}
+body .cc_div .c-bn {
+  @apply flex-none px-3 py-2;
+}
+#cc_div #cm .c-bn,
+.cc_div .c-bn {
+  @apply max-[600px]:w-auto max-[600px]:m-1 max-[600px]:mt-4;
+}
+.prose h1,
+.prose h2,
+.prose p,
+.prose ul,
+.prose li,
+.prose div {
+  @apply text-black-200 dark:text-gray;
+}
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6,
+.prose strong,
+.prose b {
+  @apply font-semibold;
+}
+.prose p {
+  @apply leading-7;
+}
+body #cc_div #cm {
+  @apply rounded-none;
+}
+.prose a {
+  @apply text-primary dark:text-primary-100;
+}
+
+.primary-bg {
+  background: linear-gradient(180deg, #853ecc 50%, transparent 50%);
+}
+@media screen and (max-width: 1024px) {
+  .primary-bg {
+    background: linear-gradient(180deg, #853ecc 100%, transparent 0%);
+  }
+  .dark .primary-bg-dark {
+    background: linear-gradient(180deg, #6726a7 100%, transparent 0%);
+  }
+}
+
+.dark .primary-bg-dark {
+  background: linear-gradient(180deg, #6726a7 50%, transparent 50%);
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: none;
+  scrollbar-color: #9ca3af transparent;
+}
+aside {
+  overflow-y: auto;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-corner {
+  background: transparent;
+}
+.gs-light ::-webkit-scrollbar-thumb {
+  background-color: #d4d4d4;
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+.gs-dark ::-webkit-scrollbar-thumb {
+  background-color: #404040;
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+
+@media only screen and (min-width: 768px) {
+  .fold1-btn2 {
+    margin-left: 24px;
+  }
+}
+
+.gs-dark body {
+  background-color: black;
+}
+
+.gs-light body {
+  background-color: white;
+}
