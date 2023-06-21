@@ -1,6 +1,10 @@
 # seal-framework.gluestack.io (Next App)
 
-Location -> ./
+## Location
+
+```bash
+./
+```
 
 ## Install
 
@@ -16,7 +20,11 @@ yarn dev
 
 # seal-framework.gluestack.io/docs (Storybook App)
 
-Location: ./example/storybook
+## Location
+
+```bash
+./example/storybook
+```
 
 ## Install
 
@@ -24,3 +32,8 @@ Location: ./example/storybook
 yarn
 ```
 
+## Run
+
+```bash
+yarn storybook
+```
