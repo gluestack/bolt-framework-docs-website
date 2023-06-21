@@ -3,7 +3,7 @@
   "repos": [
     {
       "id": "gluestack-style",
-      "gitUrl": "https://github.com/gluestack/gluestack-style.git",
+      "gitUrl": "https://github.com/gluestack-v2/seal-framework-docs.git",
       "previewJSPath": "example/storybook/.storybook/preview.js",
       "docsPath": "example/storybook/src",
       "branchName": "main",
