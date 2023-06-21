@@ -13,7 +13,7 @@
     "update-stories": "sb-rn-get-stories --config-path .ondevice",
     "prestart": "yarn update-stories",
     "storybook-watcher": "sb-rn-watcher --config-path .ondevice",
-    "storybook": "NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6007",
+    "storybook": "start-storybook -p 6007",
     "build": "build-storybook",
     "release": "release-it",
     "create-story": "node ./scripts/create-story.js"

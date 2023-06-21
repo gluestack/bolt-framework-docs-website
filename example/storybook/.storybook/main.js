@@ -1,19 +1,19 @@
-const path = require('path');
+const path = require("path");
 module.exports = {
-  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
 
   addons: [
-    'storybook-dark-mode',
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    '@storybook/addon-react-native-web',
-    '@storybook/addon-docs',
+    "storybook-dark-mode",
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-react-native-web",
+    "@storybook/addon-docs",
   ],
-  framework: '@storybook/react',
+  framework: "@storybook/react",
   typescript: {
-    reactDocgen: 'none',
+    reactDocgen: "none",
   },
-  staticDirs: ['../public'],
+  staticDirs: ["../public"],
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
     // You can change the configuration based on that.
@@ -30,25 +30,22 @@ module.exports = {
       test: /\.(js|ts|tsx)$/,
       include: [
         // path.resolve('../../', 'node_modules/@universa11y'),
-        path.resolve('../../', 'node_modules/@gluestack-ui'),
-        path.resolve('../../', 'node_modules/@gluestack/design-system'),
-        path.resolve(
-          '../../',
-          'node_modules/@gluestack-style/animation-plugin'
-        ),
-        path.resolve('./', 'node_modules/@gluestack-style/animation-plugin'),
-        path.resolve('./', 'node_modules/@gluestack/design-system'),
-        path.resolve('../../', 'node_modules/@gluestack-style/react'),
-        path.resolve('./', 'node_modules/@gluestack-style/react'),
+        path.resolve("node_modules/@gluestack-ui"),
+        path.resolve("node_modules/@gluestack/design-system"),
+        path.resolve("node_modules/@gluestack-style/animation-plugin"),
+        path.resolve("node_modules/@gluestack-style/animation-plugin"),
+        path.resolve("node_modules/@gluestack/design-system"),
+        path.resolve("node_modules/@gluestack-style/react"),
+        path.resolve("node_modules/@gluestack-style/react"),
         // path.resolve('./', 'node_modules/@gluestack-ui'),
       ],
-      use: 'babel-loader',
+      use: "babel-loader",
     });
 
     config.module.rules.push({
       test: /\.mjs$/,
       include: /node_modules/,
-      type: 'javascript/auto',
+      type: "javascript/auto",
     });
     // Return the altered config
     return config;
