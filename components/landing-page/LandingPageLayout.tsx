@@ -30,8 +30,8 @@ const LandingPageLayout = () => {
       </Box>
       <Head>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <title>gluestack-style: Universal and Performant styling Library</title>
-        <meta
+        <title>gluestack-seal</title>
+        {/* <meta
           name="description"
           content="gluestack-style is a universal & performant styling library for React Native, Next.js, Expo & React"
         />
@@ -79,6 +79,7 @@ const LandingPageLayout = () => {
         />
 
         <link rel="canonical" href="https://style.gluestack.io/" />
+        */}
       </Head>
 
       <Header
