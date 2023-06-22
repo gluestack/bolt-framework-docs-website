@@ -179,7 +179,12 @@ const Newsletter = () => {
                   backgroundColor="transparent"
                   justifyContent="center"
                 >
-                  <MailIcon />
+                  <Image
+                    src="/icon/mail.svg"
+                    width={24}
+                    height={24}
+                    alt="mail icon"
+                  />
                 </Input.Icon>
                 <Input.Input
                   flex={1}

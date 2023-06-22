@@ -12,9 +12,12 @@ import {
 } from "@gluestack/design-system";
 import Sidebar from "./Sidebar";
 import { data, dropDownItems } from "./data";
-import { DarkHeaderLogoBeta, MailIcon } from "./images";
+import { MailIcon } from "./images";
 import Dropdown from "./Dropdown";
+import NextLink from "next/link";
+import { LogoDarkMode } from "@/components/Logos";
 import { CustomNextLink } from "../CustomNextLink";
+import BetaTag from "./BetaTag";
 
 const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
   return (
@@ -46,16 +49,17 @@ const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
           }}
           mx={"$5"}
         >
-          <HStack justifyContent="center" alignItems="center">
-            <CustomNextLink
+          <HStack alignItems="center">
+            <NextLink
               href="/"
-              // style={{
-              //   // @ts-ignore
-              //   textDecoration: "none",
-              // }}
+              style={{
+                textDecoration: "none",
+                display: "inherit",
+              }}
             >
-              <DarkHeaderLogoBeta />
-            </CustomNextLink>
+              <LogoDarkMode />
+            </NextLink>
+            <BetaTag />
             <Box
               ml="$6"
               sx={{
@@ -98,16 +102,15 @@ const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
                 >
                   <Link
                     href={item.link}
+                    isExternal={item.isExternal}
+                    px="$3"
+                    py="$1"
+                    rounded="$full"
                     sx={{
-                      // textDecoration: "none",
-                      px: "$3",
-                      py: "$1",
-                      borderRadius: "$full",
                       ":hover": {
                         bg: "$secondary50_alpha_10",
                       },
                     }}
-                    isExternal={item.isExternal}
                   >
                     <Text
                       color="$white"
@@ -124,6 +127,65 @@ const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
                       {item.name}
                     </Text>
                   </Link>
+                  {/* {item.isExternal ? (
+                    <Link
+                      href={item.link}
+                      isExternal={item.isExternal}
+                      px="$3"
+                      py="$1"
+                      rounded="$full"
+                      sx={{
+                        ":hover": {
+                          bg: "$secondary50_alpha_10",
+                        },
+                      }}
+                    >
+                      <Text
+                        color="$white"
+                        fontWeight="$medium"
+                        sx={{
+                          "@base": {
+                            fontSize: "$sm",
+                          },
+                          "@md": {
+                            fontSize: "$md",
+                          },
+                        }}
+                      >
+                        {item.name}
+                      </Text>
+                    </Link>
+                  ) : (
+                    <Pressable>
+                      {({ hovered }: any) => (
+                        <CustomNextLink href={item.link}>
+                          <Box
+                            px="$3"
+                            py="$1"
+                            rounded="$full"
+                            bg={
+                              hovered ? "$secondary50_alpha_10" : "transparent"
+                            }
+                          >
+                            <Text
+                              color="$white"
+                              fontWeight="$medium"
+                              sx={{
+                                "@base": {
+                                  fontSize: "$sm",
+                                },
+                                "@md": {
+                                  fontSize: "$md",
+                                },
+                              }}
+                            >
+                              {item.name}
+                            </Text>
+                          </Box>
+                        </CustomNextLink>
+                      )}
+                    </Pressable>
+                  )} */}
                 </Box>
               ))}
               <Link href="#subscribe" ml="$3" rounded="$full">

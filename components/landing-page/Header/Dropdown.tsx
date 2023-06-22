@@ -21,6 +21,7 @@ function Dropdown(props: any) {
         onPress={() => setIsOpen(!isOpen)}
         sx={{
           _web: {
+            cursor: "pointer",
             ":focus": {
               boxShadow: "#004282 0px 0px 0px 2px",
               _dark: {
@@ -44,16 +45,14 @@ function Dropdown(props: any) {
       </Pressable>
 
       {isOpen && (
-        <Box position="absolute" top={0}>
+        <Box position="absolute">
           <Box
             bg="$backgroundDark900"
             borderWidth={1}
             borderColor="$borderDark800"
-            // w="100%"
             width={420}
             borderRadius="$md"
-            // p="$3"
-            mt="$10"
+            mt="$2"
           >
             {dropDownItems.map((item: any, index: number) => {
               return (

@@ -29,7 +29,7 @@ const LandingPageLayout = () => {
         <BgImage />
       </Box>
       <Head>
-        <link rel="icon" type="image/x-icon" href="/icon/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <title>gluestack-style: Universal and Performant styling Library</title>
         <meta
           name="description"
@@ -51,7 +51,7 @@ const LandingPageLayout = () => {
         <meta property="og:site_name" content="gluestack-style" />
         <meta
           name="og:image"
-          content="https://style.gluestack.io/gluestack-style-og.png"
+          content="https://style.gluestack.io/images/og-image.png"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -66,7 +66,7 @@ const LandingPageLayout = () => {
         />
         <meta
           name="twitter:image"
-          content="https://style.gluestack.io/gluestack-style-og.png"
+          content="https://style.gluestack.io/images/og-image.png"
         />
 
         <meta

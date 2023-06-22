@@ -9,7 +9,6 @@ import {
   Text,
   Heading,
   Link,
-  // @ts-ignore
 } from "@gluestack/design-system";
 
 const communities = [
@@ -48,14 +47,15 @@ const Community = () => {
       }}
     >
       <Box>
-        <Heading
-          fontSize="$4xl"
+        <Text
           fontWeight="$bold"
           lineHeight="$4xl"
           color="$textDark50"
           textAlign="center"
-          my={0}
           sx={{
+            "@base": {
+              fontSize: "$4xl",
+            },
             "@md": {
               fontSize: "$5xl",
             },
@@ -65,7 +65,7 @@ const Community = () => {
           }}
         >
           Community
-        </Heading>
+        </Text>
         <Text
           fontSize="$xl"
           lineHeight="$xl"
@@ -150,7 +150,6 @@ const Community = () => {
                   color="$textDark400"
                   flexWrap="wrap"
                   lineHeight="$md"
-                  // mt="$1" // can be omitted when space="$5 is supported"
                   sx={{
                     _dark: {
                       color: "$textDark400",
