@@ -30,56 +30,56 @@ const LandingPageLayout = () => {
       </Box>
       <Head>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <title>gluestack-seal</title>
-        {/* <meta
+        <title>Bolt: Development environment without the pain</title>
+        <meta
           name="description"
-          content="gluestack-style is a universal & performant styling library for React Native, Next.js, Expo & React"
+          content="Bolt runs the dev environment on your machine with the option of running services on the host machine, Docker and inside a VM with a unified API"
         />
         <meta
           property="og:title"
-          content="gluestack-style: Universal and performant styling library"
+          content="Bolt: Development environment without the pain"
         />
         <meta
           property="og:description"
-          content="gluestack-style is a universal & performant styling library for React Native, Next.js, Expo & React"
+          content="Bolt runs the dev environment on your machine with the option of running services on the host machine, Docker and inside a VM with a unified API"
         />
-        <meta property="og:url" content="https://style.gluestack.io/" />
-        <meta
+        <meta property="og:url" content="https://seal-framework.gluestack.io" />
+        {/* <meta
           property="og:logo"
-          content="https://style.gluestack.io/assets/logo.png"
-        />
-        <meta property="og:site_name" content="gluestack-style" />
-        <meta
+          content="https://seal-framework.gluestack.io/assets/logo.png"
+        /> */}
+        <meta property="og:site_name" content="Bolt" />
+        {/* <meta
           name="og:image"
-          content="https://style.gluestack.io/images/og-image.png"
-        />
+          content="https://seal-framework.gluestack.io/images/og-image.png"
+        /> */}
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@gluestack" />
         <meta
           property="twitter:title"
-          content="gluestack-style: Universal and Performant styling Library"
+          content="Bolt: Development environment without the pain"
         />
         <meta
           property="twitter:description"
-          content="gluestack-style is a universal & performant styling library for React Native, Next.js, Expo & React"
+          content="Bolt runs the dev environment on your machine with the option of running services on the host machine, Docker and inside a VM with a unified API"
         />
-        <meta
+        {/* <meta
           name="twitter:image"
-          content="https://style.gluestack.io/images/og-image.png"
-        />
+          content="https://seal-framework.gluestack.io/images/og-image.png"
+        /> */}
 
         <meta
           name="twitter:image:alt"
-          content="gluestack-style is a universal & performant styling library for React Native, Next.js, Expo & React"
+          content="Bolt runs the dev environment on your machine with the option of running services on the host machine, Docker and inside a VM with a unified API"
         />
-        <meta
+        {/* need to update the content below */}
+        {/* <meta
           name="google-site-verification"
           content="407fPlqhFVvkfGtuTVXUzXwd-Mcri2Lu4PDNwPFrpS4"
-        />
+        /> */}
 
-        <link rel="canonical" href="https://style.gluestack.io/" />
-        */}
+        <link rel="canonical" href="https://seal-framework.gluestack.io" />
       </Head>
 
       <Header
@@ -164,7 +164,7 @@ const LandingPageLayout = () => {
           >
             <DankBtnLogo />
             <Text ml="$3" lineHeight="$md" color="$textDark50">
-              Made with gluestack-style
+              Made with gluestack-ui
             </Text>
           </Badge>
         </HStack>

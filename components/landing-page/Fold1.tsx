@@ -80,7 +80,7 @@ const Fold1 = memo(() => {
             },
           }}
         >
-          Universal and Performant Styling Library
+          Development environment without the pain
         </Heading>
         <Text
           color="$secondary300_alpha_70"
@@ -107,30 +107,9 @@ const Fold1 = memo(() => {
             },
           }}
         >
-          Made for{" "}
-          <Text
-            color="$textDark50"
-            fontSize="$lg"
-            fontWeight="$normal"
-            lineHeight="$2xl"
-            sx={{
-              "@base": {
-                mt: "$3",
-                fontSize: "$2xl",
-                lineHeight: "$2xl",
-                textAlign: "left",
-              },
-              "@sm": {
-                mt: "$4",
-                fontSize: "$2xl",
-                textAlign: "center",
-              },
-            }}
-          >
-            React Native, Next.js, Expo & React
-          </Text>
-          {/* Styling library made for React, Next.js & React Native */}
-          {/* Streamline your React, Next.js & React Native apps seamlessly */}
+          Bolt runs the dev environment on your machine with the option of
+          running services on the host machine, Docker and inside a VM with a
+          unified API
         </Text>
       </VStack>
       <VStack
