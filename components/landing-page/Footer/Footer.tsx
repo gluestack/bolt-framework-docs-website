@@ -45,6 +45,7 @@ function Footer() {
           >
             <LogoDarkMode />
           </Link>
+
           <HStack alignItems="center" my="$3">
             <Link
               target="_blank"
@@ -58,10 +59,10 @@ function Footer() {
                   Built with love at{" "}
                 </Text>
                 <Image
-                  src="/icon/geekyants.svg"
+                  src="/images/footerlogo.svg"
                   width={21}
                   height={20}
-                  alt="geekyants_icon"
+                  alt="/images/geekyantsicon.svg"
                 />
                 <Text color="$textDark100" fontSize="$lg" lineHeight="$lg">
                   {" "}

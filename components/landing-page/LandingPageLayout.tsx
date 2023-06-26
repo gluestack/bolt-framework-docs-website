@@ -1,16 +1,13 @@
 import React from "react";
 // @ts-ignore
-import { Badge, Box, HStack, Text } from "@gluestack/design-system";
+import { Box } from "@gluestack/design-system";
 import Header from "./Header";
-import MainContent, { DankBtnLogo } from "./MainContent";
-// import Footer from "./Footer";
+import MainContent from "./MainContent";
 import Footer from "./Footer/Footer";
 import Head from "next/head";
 import BgImage from "./bgImage";
 import NewsletterFold from "./NewsletterFold";
-import MeetCreators from "./MeetCreators";
 import BadgeComponent from "./BadgeComponent";
-import NextImage from "next/image";
 
 const LandingPageLayout = () => {
   const [isOpenSidebar, setIsOpenSidebar] = React.useState(false);
@@ -108,22 +105,6 @@ const LandingPageLayout = () => {
         <Box display={isOpenSidebar ? "none" : "flex"}>
           <NewsletterFold />
         </Box>
-
-        {/* <Box
-          justifyContent="center"
-          display={isOpenSidebar ? "none" : "flex"}
-          maxWidth={1200}
-          w="85%"
-          sx={{
-            "@lg": {
-              w: "70%",
-            },
-          }}
-          margin="0 auto"
-          position="relative"
-        >
-          <MeetCreators />
-        </Box> */}
 
         <Box display={isOpenSidebar ? "none" : "flex"}>
           <Footer />
