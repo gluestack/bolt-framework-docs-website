@@ -1,13 +1,12 @@
 import React from "react";
 // @ts-ignore
-import { Badge, Box, HStack, Text } from "@gluestack/design-system";
+import { Box } from "@gluestack/design-system";
 import Header from "./Header";
-import MainContent, { DankBtnLogo } from "./MainContent";
-import Footer from "./Footer";
+import MainContent from "./MainContent";
+import Footer from "./Footer/Footer";
 import Head from "next/head";
 import BgImage from "./bgImage";
 import NewsletterFold from "./NewsletterFold";
-import MeetCreators from "./MeetCreators";
 import BadgeComponent from "./BadgeComponent";
 
 const LandingPageLayout = () => {
@@ -106,69 +105,12 @@ const LandingPageLayout = () => {
         <Box display={isOpenSidebar ? "none" : "flex"}>
           <NewsletterFold />
         </Box>
-        <Box
-          justifyContent="center"
-          display={isOpenSidebar ? "none" : "flex"}
-          maxWidth={1200}
-          w="85%"
-          sx={{
-            "@lg": {
-              w: "70%",
-            },
-          }}
-          margin="0 auto"
-          position="relative"
-        >
-          <MeetCreators />
-        </Box>
 
-        <Box
-          justifyContent="center"
-          display={isOpenSidebar ? "none" : "flex"}
-          maxWidth={1200}
-          w="85%"
-          sx={{
-            "@lg": {
-              w: "70%",
-            },
-          }}
-          margin="0 auto"
-          position="relative"
-        >
+        <Box display={isOpenSidebar ? "none" : "flex"}>
           <Footer />
         </Box>
       </Box>
-      <Box
-        position="sticky"
-        bottom="$6"
-        right="0"
-        justifyContent="space-between"
-        w="85%"
-        maxWidth={1440}
-        margin="0 auto"
-        pointerEvents="none"
-      >
-        <HStack justifyContent="flex-end">
-          <Badge
-            p="$3"
-            borderRadius="$xl"
-            borderWidth={2}
-            borderColor="$borderDark700"
-            style={{
-              // @ts-ignore
-              background:
-                "linear-gradient(90.89deg, #1D2130 0%, #20253C 34.68%, #332E52 54.82%, #222F46 102.19%)",
-            }}
-            zIndex={50}
-            pointerEvents="box-only"
-          >
-            <DankBtnLogo />
-            <Text ml="$3" lineHeight="$md" color="$textDark50">
-              Made with gluestack-ui
-            </Text>
-          </Badge>
-        </HStack>
-      </Box>
+      <BadgeComponent />
     </Box>
   );
 };

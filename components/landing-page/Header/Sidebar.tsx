@@ -87,34 +87,36 @@ function Sidebar({ data, dropDownItems, setIsOpenSidebar }: any) {
                     {item.name}
                   </Text>
                   {item.icon}
-                  <Box
-                    style={{
-                      background:
-                        "linear-gradient(260.55deg, rgba(21, 129, 228, 0.165) 11.83%, rgba(107, 54, 175, 0.183) 45.13%, rgba(42, 180, 217, 0.045) 93.61%)",
-                      backdropFilter: "blur(12px)",
-                    }}
-                    py="$0.5"
-                    px="$2.5"
-                    ml="$3"
-                    mt="$0.5"
-                    borderRadius="$full"
-                    borderWidth={2}
-                    borderColor="$borderDark800"
-                    alignSelf="flex-start"
-                  >
-                    <Text
-                      fontSize="$2xs"
-                      lineHeight="$2xs"
-                      color="$textDark50"
-                      sx={{
-                        _dark: {
-                          color: "$textDark50",
-                        },
+                  {item.tag && (
+                    <Box
+                      style={{
+                        background:
+                          "linear-gradient(260.55deg, rgba(21, 129, 228, 0.165) 11.83%, rgba(107, 54, 175, 0.183) 45.13%, rgba(42, 180, 217, 0.045) 93.61%)",
+                        backdropFilter: "blur(12px)",
                       }}
+                      py="$0.5"
+                      px="$2.5"
+                      ml="$3"
+                      mt="$0.5"
+                      borderRadius="$full"
+                      borderWidth={2}
+                      borderColor="$borderDark800"
+                      alignSelf="flex-start"
                     >
-                      {item.tag}
-                    </Text>
-                  </Box>
+                      <Text
+                        fontSize="$2xs"
+                        lineHeight="$2xs"
+                        color="$textDark50"
+                        sx={{
+                          _dark: {
+                            color: "$textDark50",
+                          },
+                        }}
+                      >
+                        {item.tag}
+                      </Text>
+                    </Box>
+                  )}
                 </Box>
               </Link>
             </SidebarMain.GroupItem>
