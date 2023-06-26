@@ -11,8 +11,7 @@
       "repoName": "seal-framework-docs-storybook",
       "rootDocs": false,
       "ignoredfolders": [],
-      "destinationPath": "/docs",
-      "firstPage": "/docs/getting-started/installation"
+      "destinationPath": "/docs"
     }
   ]
 }
