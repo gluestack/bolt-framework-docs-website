@@ -56,7 +56,17 @@ const Newsletter = () => {
   };
 
   return (
-    <Box mb={200} nativeID="subscribe" pt={100}>
+    <Box
+      mt="$20"
+      mb="$40"
+      sx={{
+        "@md": {
+          mt: 100,
+          mb: 200,
+        },
+      }}
+      nativeID="subscribe"
+    >
       <Box margin="0 auto" alignItems="center">
         <Box
           w="85%"

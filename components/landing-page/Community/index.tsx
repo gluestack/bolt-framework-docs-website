@@ -39,11 +39,12 @@ const Community = () => {
   return (
     //  @ts-ignore
     <VStack
-      mt={200}
+      mt="$20"
       mb="$20"
       sx={{
         "@md": {
-          mb: 200,
+          mb: 100,
+          mt: 100,
         },
       }}
     >

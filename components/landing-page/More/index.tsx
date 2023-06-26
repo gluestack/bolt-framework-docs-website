@@ -10,17 +10,21 @@ import React from "react";
 
 function More() {
   return (
-    <Box flexDirection="column">
+    <VStack
+      mt="$20"
+      mb="$20"
+      sx={{
+        "@md": {
+          mb: 100,
+          mt: 100,
+        },
+      }}
+    >
       <Box
-        width="100%"
-        justifyContent="center"
         mb="$7"
         sx={{
           "@md": {
             mb: 60,
-          },
-          "@xl": {
-            width: "auto",
           },
         }}
       >
@@ -75,7 +79,7 @@ function More() {
           <FrameworkCard />
         </Box>
       </Box>
-    </Box>
+    </VStack>
   );
 }
 
