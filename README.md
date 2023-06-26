@@ -1,4 +1,4 @@
-# seal-framework.gluestack.io (Next App)
+# seal-framework.gluestack.io (Next App) - 
 
 ## Location
 
