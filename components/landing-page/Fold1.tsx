@@ -28,8 +28,8 @@ const Fold1 = memo(() => {
       mb="$20"
       sx={{
         "@md": {
-          pt: "140px",
-          mb: "200px",
+          pt: 140,
+          mb: 200,
         },
       }}
     >
@@ -62,16 +62,16 @@ const Fold1 = memo(() => {
             "@md": {
               fontSize: "$6xl",
               lineHeight: "$6xl",
-              mx: "50px",
+              mx: 50,
             },
             "@lg": {
-              mx: "0px",
+              mx: 0,
             },
             "@xl": {
-              mx: "20px",
+              mx: 20,
             },
             "@xxl": {
-              mx: "140px",
+              mx: 140,
             },
             _dark: {
               color: "white",
