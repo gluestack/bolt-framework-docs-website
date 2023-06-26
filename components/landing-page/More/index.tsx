@@ -11,23 +11,14 @@ import React from "react";
 function More() {
   return (
     <VStack
-      mt="$20"
       mb="$20"
       sx={{
         "@md": {
-          mb: 100,
-          mt: 100,
+          mb: 200,
         },
       }}
     >
-      <Box
-        mb="$7"
-        sx={{
-          "@md": {
-            mb: 60,
-          },
-        }}
-      >
+      <Box mb={60}>
         <Text
           fontSize="$lg"
           lineHeight="$xl"
@@ -43,7 +34,7 @@ function More() {
         >
           More from the creators
         </Text>
-        <Heading
+        <Text
           my={0}
           fontWeight="$bold"
           fontSize="$5xl"
@@ -57,7 +48,7 @@ function More() {
           }}
         >
           Our Ecosystem
-        </Heading>
+        </Text>
       </Box>
       <Box
         mb="$20"

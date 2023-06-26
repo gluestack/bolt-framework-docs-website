@@ -25,13 +25,11 @@ const Fold1 = memo(() => {
     // @ts-ignore
     <VStack
       pt="$10"
+      mb="$20"
       sx={{
-        "@base": {
-          mb: "$20",
-        },
         "@md": {
           pt: "140px",
-          mb: "100px",
+          mb: "200px",
         },
       }}
     >
@@ -112,7 +110,8 @@ const Fold1 = memo(() => {
           unified API
         </Text>
       </VStack>
-      <VStack
+
+      {/* <VStack
         // space="lg"
         sx={{
           "@base": {
@@ -123,7 +122,7 @@ const Fold1 = memo(() => {
           },
         }}
       >
-        {/* <HStack
+        <HStack
           sx={{
             "@base": {
               flexDirection: "column",
@@ -182,7 +181,7 @@ const Fold1 = memo(() => {
               </Text>
             </HStack>
           ))}
-        </HStack> */}
+        </HStack>
         <HStack
           // space="lg" need responsive
           sx={{
@@ -289,7 +288,7 @@ const Fold1 = memo(() => {
             </Button>
           </DSLink>
         </HStack>
-      </VStack>
+      </VStack> */}
     </VStack>
   );
 });

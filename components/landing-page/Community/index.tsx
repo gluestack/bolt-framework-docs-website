@@ -39,12 +39,10 @@ const Community = () => {
   return (
     //  @ts-ignore
     <VStack
-      mt="$20"
       mb="$20"
       sx={{
         "@md": {
-          mb: 100,
-          mt: 100,
+          mb: 200,
         },
       }}
     >
@@ -88,14 +86,13 @@ const Community = () => {
         </Text>
       </Box>
       <Box
+        pt={60}
         sx={{
           "@base": {
             flexDirection: "column",
-            pt: "$7",
           },
           "@md": {
             flexDirection: "row",
-            pt: 60,
           },
         }}
         flexWrap="wrap"

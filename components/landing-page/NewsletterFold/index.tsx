@@ -57,11 +57,9 @@ const Newsletter = () => {
 
   return (
     <Box
-      mt="$20"
-      mb="$40"
+      mb="$20"
       sx={{
         "@md": {
-          mt: 100,
           mb: 200,
         },
       }}
