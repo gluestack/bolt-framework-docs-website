@@ -26,7 +26,7 @@ const MainContent = () => {
   return (
     // @ts-ignore
     <VStack>
-      <Fold1 />
+      {/* <Fold1 />
       <Fold2 />
       <Fold3 />
       <Statistics />
@@ -157,8 +157,8 @@ const MainContent = () => {
           }}
         />
         <ThemeCodeSnippet {...mainContent[1]} />
-      </Box>
-      <Box>
+      </Box> */}
+      {/* <Box>
         <Box
           position="absolute"
           top="18%"
@@ -220,8 +220,8 @@ const MainContent = () => {
           }}
         />
         <ThemeCodeSnippet {...mainContent[2]} />
-      </Box>
-      <Box>
+      </Box> */}
+      {/* <Box>
         <Box
           position="absolute"
           top="20%"
@@ -283,10 +283,10 @@ const MainContent = () => {
           }}
         />
         <ThemeCodeSnippet {...mainContent[3]} />
-      </Box>
+      </Box> */}
 
-      <Box>
-        {/* <Box
+      {/* <Box> */}
+      {/* <Box
           position="absolute"
           top="20%"
           bottom="-10%"
@@ -316,9 +316,9 @@ const MainContent = () => {
           // display="none"
           sx={{ "@md": { display: "flex" } }}
         /> */}
-        <ThemeCodeSnippet {...mainContent[4]} />
-      </Box>
-      <Box>
+      {/* <ThemeCodeSnippet {...mainContent[4]} /> */}
+      {/* </Box> */}
+      {/* <Box>
         <Box
           position="absolute"
           top="18%"
@@ -380,8 +380,8 @@ const MainContent = () => {
           }}
         />
         <Fold5 />
-      </Box>
-      <Inspiration />
+      </Box> */}
+      {/* <Inspiration /> */}
       <Community />
       <More />
     </VStack>

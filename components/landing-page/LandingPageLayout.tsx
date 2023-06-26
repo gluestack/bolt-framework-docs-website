@@ -106,7 +106,7 @@ const LandingPageLayout = () => {
         <Box display={isOpenSidebar ? "none" : "flex"}>
           <NewsletterFold />
         </Box>
-        <Box
+        {/* <Box
           justifyContent="center"
           display={isOpenSidebar ? "none" : "flex"}
           maxWidth={1200}
@@ -120,9 +120,9 @@ const LandingPageLayout = () => {
           position="relative"
         >
           <MeetCreators />
-        </Box>
+        </Box> */}
 
-        <Box
+        {/* <Box
           justifyContent="center"
           display={isOpenSidebar ? "none" : "flex"}
           maxWidth={1200}
@@ -136,7 +136,7 @@ const LandingPageLayout = () => {
           position="relative"
         >
           <Footer />
-        </Box>
+        </Box> */}
       </Box>
       <Box
         position="sticky"
