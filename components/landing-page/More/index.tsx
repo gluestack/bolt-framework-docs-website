@@ -1,11 +1,4 @@
-import {
-  Box,
-  HStack,
-  Link,
-  Text,
-  VStack,
-  Heading,
-} from "@gluestack/design-system";
+import { Box, Text, VStack } from "@gluestack/design-system";
 import React from "react";
 
 function More() {
@@ -88,7 +81,6 @@ const StyleCard = () => {
             "linear-gradient(290.46deg, rgba(0, 16, 71, 0.4) -26%, rgba(77, 77, 77, 0) 100.23%), linear-gradient(98.21deg, rgba(25, 44, 171, 0.6) -21.6%, rgba(15, 24, 86, 0) 94.94%)",
         },
         "@md": {
-          // mr: "$6",
           flex: 1,
         },
         "@lg": {
@@ -120,14 +112,7 @@ const StyleCard = () => {
           >
             Looking for universal and performant CSS-in-JS library?
           </Text>
-          <Box
-            mt="auto"
-            sx={{
-              "@lg": {
-                // flexDirection: "row",
-              },
-            }}
-          >
+          <Box mt="auto">
             <Text
               fontWeight="$semibold"
               fontSize="$2xl"
@@ -224,14 +209,7 @@ const UiCard = () => {
           >
             Want beautifully designed, accessible and universal components?
           </Text>
-          <Box
-            mt="auto"
-            sx={{
-              "@lg": {
-                // flexDirection: "row",
-              },
-            }}
-          >
+          <Box mt="auto">
             <Text
               fontWeight="$semibold"
               fontSize="$2xl"
@@ -285,20 +263,15 @@ const UiCard = () => {
 const FrameworkCard = () => {
   return (
     <Box
-      // mb="$10"
       borderWidth={1}
       borderColor="$borderDark800"
       borderRadius="$xl"
       overflow="hidden"
       sx={{
         "@md": {
-          // mb: "0",
-          // mr: "$6",
           flex: 1,
         },
-        "@lg": {
-          // mr: "$10",
-        },
+
         _web: {
           background:
             "linear-gradient(281.59deg, rgba(0, 29, 131, 0.4) -24.93%, rgba(77, 77, 77, 0) 107.72%), linear-gradient(98.21deg, rgba(29, 18, 51, 0.6) -21.6%, rgba(27, 12, 42, 0.6) 94.94%)",
@@ -328,14 +301,7 @@ const FrameworkCard = () => {
           >
             Want full-stack framework for web, mobile & backend?
           </Text>
-          <Box
-            mt="auto"
-            sx={{
-              "@lg": {
-                // flexDirection: "row",
-              },
-            }}
-          >
+          <Box mt="auto">
             <Text
               fontWeight="$semibold"
               fontSize="$2xl"

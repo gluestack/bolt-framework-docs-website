@@ -7,7 +7,6 @@ import {
   GitHubIcon,
   DiscordIcon,
   Text,
-  Heading,
   Link,
 } from "@gluestack/design-system";
 
