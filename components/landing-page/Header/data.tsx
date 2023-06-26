@@ -50,7 +50,7 @@ export const dropDownItems = [
 export const data = [
   {
     name: "Docs",
-    link: "/docs/getting-started/installation",
+    link: "/docs",
     icon: <></>,
   },
   {
