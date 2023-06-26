@@ -39,6 +39,7 @@ const Community = () => {
   return (
     //  @ts-ignore
     <VStack
+      mt={200}
       mb="$20"
       sx={{
         "@md": {

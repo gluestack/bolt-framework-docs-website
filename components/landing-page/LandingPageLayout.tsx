@@ -3,12 +3,14 @@ import React from "react";
 import { Badge, Box, HStack, Text } from "@gluestack/design-system";
 import Header from "./Header";
 import MainContent, { DankBtnLogo } from "./MainContent";
-import Footer from "./Footer";
+// import Footer from "./Footer";
+import Footer from "./Footer/Footer";
 import Head from "next/head";
 import BgImage from "./bgImage";
 import NewsletterFold from "./NewsletterFold";
 import MeetCreators from "./MeetCreators";
 import BadgeComponent from "./BadgeComponent";
+import NextImage from "next/image";
 
 const LandingPageLayout = () => {
   const [isOpenSidebar, setIsOpenSidebar] = React.useState(false);
@@ -122,33 +124,37 @@ const LandingPageLayout = () => {
           <MeetCreators />
         </Box> */}
 
-        {/* <Box
-          justifyContent="center"
-          display={isOpenSidebar ? "none" : "flex"}
-          maxWidth={1200}
-          w="85%"
-          sx={{
-            "@lg": {
-              w: "70%",
-            },
-          }}
-          margin="0 auto"
-          position="relative"
-        >
+        <Box display={isOpenSidebar ? "none" : "flex"}>
           <Footer />
-        </Box> */}
+        </Box>
       </Box>
       <Box
-        position="sticky"
-        bottom="$6"
+        pb="$4"
+        alignItems="center"
+        zIndex={10}
+        bottom="0"
         right="0"
-        justifyContent="space-between"
-        w="85%"
-        maxWidth={1440}
-        margin="0 auto"
+        left={0}
         pointerEvents="none"
+        sx={{
+          _web: {
+            position: "fixed",
+          },
+        }}
       >
-        <HStack justifyContent="flex-end">
+        <Box
+          flexDirection="row"
+          alignItems="center"
+          maxWidth={1440}
+          sx={{
+            "@lg": {
+              mx: 180,
+            },
+          }}
+          width="85%"
+          mx="$5"
+          pointerEvents="none"
+        >
           <Badge
             p="$3"
             borderRadius="$xl"
@@ -160,14 +166,20 @@ const LandingPageLayout = () => {
                 "linear-gradient(90.89deg, #1D2130 0%, #20253C 34.68%, #332E52 54.82%, #222F46 102.19%)",
             }}
             zIndex={50}
+            ml="auto"
             pointerEvents="box-only"
           >
-            <DankBtnLogo />
+            <NextImage
+              alt="ui logo"
+              src="/icon/favicons/ui.svg"
+              width={24}
+              height={24}
+            />
             <Text ml="$3" lineHeight="$md" color="$textDark50">
               Made with gluestack-ui
             </Text>
           </Badge>
-        </HStack>
+        </Box>
       </Box>
     </Box>
   );
