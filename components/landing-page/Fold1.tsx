@@ -1,16 +1,13 @@
 import React, { memo } from "react";
 import {
   Text,
-  HStack,
-  Button,
   VStack,
   Heading,
-  GitHubIcon,
   Link as DSLink,
-  OpenInNewIcon,
+  HStack,
+  Box,
+  CheckIcon,
 } from "@gluestack/design-system";
-import CustomArrowForwardIcon from "../CustomArrowForwardIcon";
-import { CustomNextLink } from "./CustomNextLink";
 
 const features = [
   "Utility Props",
@@ -25,13 +22,11 @@ const Fold1 = memo(() => {
     // @ts-ignore
     <VStack
       pt="$10"
+      mb="$20"
       sx={{
-        "@base": {
-          mb: "$20",
-        },
         "@md": {
-          pt: "140px",
-          mb: "100px",
+          pt: 140,
+          mb: 200,
         },
       }}
     >
@@ -64,16 +59,16 @@ const Fold1 = memo(() => {
             "@md": {
               fontSize: "$6xl",
               lineHeight: "$6xl",
-              mx: "50px",
+              mx: 50,
             },
             "@lg": {
-              mx: "0px",
+              mx: 0,
             },
             "@xl": {
-              mx: "20px",
+              mx: 20,
             },
             "@xxl": {
-              mx: "140px",
+              mx: 140,
             },
             _dark: {
               color: "white",
@@ -99,9 +94,6 @@ const Fold1 = memo(() => {
               fontSize: "$2xl",
               textAlign: "center",
             },
-            "@md": {
-              // textAlign: "center",
-            },
             _dark: {
               color: "$secondary300_alpha_70",
             },
@@ -112,8 +104,8 @@ const Fold1 = memo(() => {
           unified API
         </Text>
       </VStack>
+
       <VStack
-        // space="lg"
         sx={{
           "@base": {
             mt: "$9",
@@ -123,7 +115,7 @@ const Fold1 = memo(() => {
           },
         }}
       >
-        {/* <HStack
+        <HStack
           sx={{
             "@base": {
               flexDirection: "column",
@@ -182,112 +174,6 @@ const Fold1 = memo(() => {
               </Text>
             </HStack>
           ))}
-        </HStack> */}
-        <HStack
-          // space="lg" need responsive
-          sx={{
-            "@base": {
-              mt: "$3",
-              flexDirection: "column",
-              justifyContent: "center",
-              //alignItems: "",
-            },
-            "@md": {
-              mt: "$7",
-              justifyContent: "center",
-              flexDirection: "row",
-              alignItems: "flex-start",
-            },
-          }}
-        >
-          <CustomNextLink
-            href="/docs/getting-started/installation"
-            style={{
-              textDecoration: "none",
-              // outline: 0,
-              marginBottom: "24px",
-              borderRadius: "999px",
-            }}
-            sx={{
-              outlineWidth: 0,
-              ":focusVisible": {
-                boxShadow:
-                  "0px 1px 3px rgba(10, 124, 255, 0.24), 0px 2px 6px rgba(10, 124, 255, 0.24), 0px 4px 8px rgba(10, 124, 255, 0.12), 0px 12px 48px -8px rgba(10, 124, 255, 0.48), inset 1px 1px 2px rgba(255, 255, 255, 0.24)",
-              },
-            }}
-          >
-            <Button
-              focusable={false}
-              accessibilityLabel="Get started"
-              variant="primary"
-              sx={{
-                "@base": {
-                  // width: "60%",
-                  py: "$2.5",
-                },
-                "@md": {
-                  width: "auto",
-                },
-              }}
-              px="$6"
-            >
-              <Button.Text
-                fontWeight="$medium"
-                fontSize="$md"
-                lineHeight="$md"
-                color="$textDark50"
-                mr={6}
-              >
-                Get started
-              </Button.Text>
-              <CustomArrowForwardIcon />
-            </Button>
-          </CustomNextLink>
-
-          <DSLink
-            // className="fold1-btn2"
-            href="https://snack.expo.dev/@gluestack/gluestack-style-starter?platform=web&theme=dark"
-            sx={{
-              rounded: "$full",
-              _text: {
-                textDecoration: "none",
-              },
-              "@md": {
-                ml: "$4",
-              },
-              ":focusVisible": {
-                outlineWidth: 0,
-                bg: "$secondary50_alpha_20",
-              },
-            }}
-            isExternal
-          >
-            <Button
-              variant="secondary"
-              py="$3"
-              sx={{
-                "@base": {
-                  px: "52px",
-                  py: "$2.5",
-                },
-                "@md": {
-                  px: "$6",
-                },
-              }}
-            >
-              <Button.Text
-                // @ts-ignore
-                fontWeight="$medium"
-                fontSize="$md"
-                lineHeight="$md"
-                color="$textDark50"
-                mr={10}
-              >
-                Try now
-              </Button.Text>
-              <OpenInNewIcon color="white" h="$4" w="$4" />
-            </Button>
-          </DSLink>
         </HStack>
       </VStack>
     </VStack>

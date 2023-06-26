@@ -43,25 +43,46 @@ export const dropDownItems = [
     ),
     link: "https://style.gluestack.io",
     tag: "beta",
+    isDisabled: false,
+  },
+  {
+    name: "Bolt",
+    description: "Development environment without the pain",
+    icon: (
+      <Image
+        src="/icon/favicons/style.svg"
+        width={20}
+        height={20}
+        alt="style logo"
+      />
+    ),
+    link: "https://bolt.gluestack.io",
     isDisabled: true,
   },
 ];
 
 export const data = [
-  {
-    name: "Docs",
-    link: "/docs",
-    icon: <></>,
-  },
-  {
-    name: "Example",
-    link: "https://snack.expo.dev/@gluestack/gluestack-style-todos-example?platform=web&theme=dark",
-    isExternal: true,
-  },
+  // {
+  //   name: "Docs",
+  //   link: "/docs/getting-started/installation",
+  //   icon: <></>,
+  // },
+  // {
+  //   name: "Example",
+  //   link: "https://snack.expo.dev/@gluestack/gluestack-style-todos-example?platform=web&theme=dark",
+  //   isExternal: true,
+  // },
+
   {
     name: "Github",
-    link: "https://github.com/gluestack/gluestack-style",
+    link: "https://github.com/gluestack-v2/framework-cli",
     isExternal: true,
     icon: <GitHubIcon w="$4" h="$4" color="white" />,
+  },
+  {
+    name: "Discord",
+    link: "https://discord.com/invite/95qQ84nf6f",
+    isExternal: true,
+    icon: <DiscordIcon w="$4" h="$4" color="white" />,
   },
 ];

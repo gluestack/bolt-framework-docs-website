@@ -7,7 +7,6 @@ import {
   GitHubIcon,
   DiscordIcon,
   Text,
-  Heading,
   Link,
 } from "@gluestack/design-system";
 
@@ -86,14 +85,13 @@ const Community = () => {
         </Text>
       </Box>
       <Box
+        pt={60}
         sx={{
           "@base": {
             flexDirection: "column",
-            pt: "$7",
           },
           "@md": {
             flexDirection: "row",
-            pt: 60,
           },
         }}
         flexWrap="wrap"
