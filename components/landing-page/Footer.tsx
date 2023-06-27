@@ -66,7 +66,7 @@ const footerItems = [
       },
       {
         title: "Discord",
-        href: "https://discord.gg/95qQ84nf6f",
+        href: "https://discord.gg/GEP2gWgd",
         target: "_blank",
         icon: <ArrowTopRightIcon color="$text200" width="$4" height="$4" />,
       },

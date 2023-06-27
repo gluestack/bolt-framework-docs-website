@@ -7,7 +7,7 @@ import { LogoDarkMode } from "@/components/Logos";
 const communities = [
   {
     name: "GitHub",
-    link: "https://github.com/gluestack-v2/framework-cli",
+    link: "https://github.com/gluestack/bolt-framework",
   },
   {
     name: "Twitter",
@@ -15,7 +15,7 @@ const communities = [
   },
   {
     name: "Discord",
-    link: "https://discord.gg/95qQ84nf6f",
+    link: "https://discord.gg/GEP2gWgd",
   },
 ];
 

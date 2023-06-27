@@ -21,14 +21,14 @@ const communities = [
   {
     name: "GitHub",
     icon: <GitHubIcon color="white" />,
-    link: "https://github.com/gluestack/gluestack-style",
+    link: "https://github.com/gluestack/bolt-framework",
     description:
       "To file issues, request features, and contribute, check out our GitHub.",
   },
   {
     name: "Discord",
     icon: <DiscordIcon color="#7289DA" />,
-    link: "https://discord.gg/95qQ84nf6f",
+    link: "https://discord.gg/GEP2gWgd",
     description:
       "To get involved in the community, ask questions, and share tips.",
   },
