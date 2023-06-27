@@ -43,15 +43,15 @@ const LandingPageLayout = () => {
           content="Bolt runs the dev environment on your machine with the option of running services on the host machine, Docker and inside a VM with a unified API"
         />
         <meta property="og:url" content="https://seal-framework.gluestack.io" />
-        {/* <meta
+        <meta
           property="og:logo"
           content="https://seal-framework.gluestack.io/assets/logo.png"
-        /> */}
+        />
         <meta property="og:site_name" content="Bolt" />
-        {/* <meta
+        <meta
           name="og:image"
-          content="https://seal-framework.gluestack.io/images/og-image.png"
-        /> */}
+          content="https://seal-framework.gluestack.io/og-image.png"
+        />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@gluestack" />
@@ -63,10 +63,10 @@ const LandingPageLayout = () => {
           property="twitter:description"
           content="Bolt runs the dev environment on your machine with the option of running services on the host machine, Docker and inside a VM with a unified API"
         />
-        {/* <meta
+        <meta
           name="twitter:image"
-          content="https://seal-framework.gluestack.io/images/og-image.png"
-        /> */}
+          content="https://seal-framework.gluestack.io/og-image.png"
+        />
 
         <meta
           name="twitter:image:alt"

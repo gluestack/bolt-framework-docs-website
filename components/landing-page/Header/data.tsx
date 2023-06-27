@@ -50,23 +50,24 @@ export const dropDownItems = [
     description: "Development environment without the pain",
     icon: (
       <Image
-        src="/icon/favicons/style.svg"
+        src="/icon/favicons/bolt.svg"
         width={20}
         height={20}
         alt="style logo"
       />
     ),
     link: "https://bolt.gluestack.io",
+    tag: "coming soon",
     isDisabled: true,
   },
 ];
 
 export const data = [
-  // {
-  //   name: "Docs",
-  //   link: "/docs/getting-started/installation",
-  //   icon: <></>,
-  // },
+  {
+    name: "Docs",
+    link: "/docs",
+    icon: <></>,
+  },
   // {
   //   name: "Example",
   //   link: "https://snack.expo.dev/@gluestack/gluestack-style-todos-example?platform=web&theme=dark",
@@ -79,10 +80,10 @@ export const data = [
     isExternal: true,
     icon: <GitHubIcon w="$4" h="$4" color="white" />,
   },
-  {
-    name: "Discord",
-    link: "https://discord.com/invite/95qQ84nf6f",
-    isExternal: true,
-    icon: <DiscordIcon w="$4" h="$4" color="white" />,
-  },
+  // {
+  //   name: "Discord",
+  //   link: "https://discord.com/invite/95qQ84nf6f",
+  //   isExternal: true,
+  //   icon: <DiscordIcon w="$4" h="$4" color="white" />,
+  // },
 ];

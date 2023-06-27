@@ -2,7 +2,7 @@ import { Box, Text } from "@gluestack/design-system";
 
 import React from "react";
 
-function BetaTag() {
+function ComingSoonTag() {
   return (
     <Box
       py="$0.5"
@@ -26,10 +26,10 @@ function BetaTag() {
         color="$textDark50"
         fontWeight="$medium"
       >
-        beta
+        coming Soon
       </Text>
     </Box>
   );
 }
 
-export default BetaTag;
+export default ComingSoonTag;

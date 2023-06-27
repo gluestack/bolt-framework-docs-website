@@ -17,7 +17,7 @@ import Dropdown from "./Dropdown";
 import NextLink from "next/link";
 import { LogoDarkMode } from "@/components/Logos";
 import { CustomNextLink } from "../CustomNextLink";
-import BetaTag from "./BetaTag";
+import BetaTag from "./ComingSoonTag";
 
 const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
   return (

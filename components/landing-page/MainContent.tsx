@@ -38,55 +38,45 @@ export const DankBtnLogo = () => {
     <svg
       width="24"
       height="24"
-      viewBox="0 0 24 24"
+      viewBox="0 0 32 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect width="7.2" height="7.2" rx="2" fill="#3F3B3B" />
-      <rect y="8.3999" width="7.2" height="7.2" rx="2" fill="#3F3B3B" />
-      <rect y="16.7998" width="7.2" height="7.2" rx="2" fill="#3F3B3B" />
-      <rect x="8.40039" width="7.2" height="7.2" rx="2" fill="#3F3B3B" />
       <rect
-        x="8.40039"
-        y="8.3999"
-        width="7.2"
-        height="7.2"
+        width="32"
+        height="32"
         rx="2"
-        fill="#3F3B3B"
-      />
-      <rect
-        x="8.40039"
-        y="16.7998"
-        width="7.2"
-        height="7.2"
-        rx="2"
-        fill="#3F3B3B"
-      />
-      <rect x="16.8008" width="7.2" height="7.2" rx="2" fill="#3F3B3B" />
-      <rect
-        x="16.8008"
-        y="8.3999"
-        width="7.2"
-        height="7.2"
-        rx="2"
-        fill="#3F3B3B"
-      />
-      <rect
-        x="16.8008"
-        y="16.7998"
-        width="7.2"
-        height="7.2"
-        rx="2"
-        fill="#3F3B3B"
+        fill="url(#paint0_linear_7965_77042)"
       />
       <path
-        d="M11.3633 10.8859L12.8205 4.2002L6.59961 13.1145H12.0358L10.5787 19.8002L16.7996 10.8859H11.3633Z"
-        fill="#3F3B3B"
-        stroke="#1A91FF"
-        stroke-width="1.25"
-        stroke-linecap="round"
-        strokeLinejoin="round"
+        d="M8 14.3559L15.9998 8.46325V11.2441L8 17.1368V14.3559Z"
+        fill="white"
       />
+      <path
+        d="M23.9995 14.356L15.9998 8.46332V11.2442L23.9995 17.1368V14.356Z"
+        fill="white"
+      />
+      <path
+        d="M8 20.7558L15.9998 14.8632V17.6441L8 23.5367V20.7558Z"
+        fill="white"
+      />
+      <path
+        d="M23.9995 20.7559L15.9998 14.8632V17.6441L23.9995 23.5367V20.7559Z"
+        fill="white"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_7965_77042"
+          x1="-8.31618"
+          y1="-46.0313"
+          x2="48.7819"
+          y2="54.6382"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#066B8B" />
+          <stop offset="0.885432" stop-color="#4CCCB5" />
+        </linearGradient>
+      </defs>
     </svg>
   );
 };
