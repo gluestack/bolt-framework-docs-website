@@ -15,7 +15,7 @@ const communities = [
   },
   {
     name: "Discord",
-    link: "https://discord.gg/95qQ84nf6f",
+    link: "https://discord.gg/GEP2gWgd",
   },
 ];
 

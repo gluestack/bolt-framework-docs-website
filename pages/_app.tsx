@@ -18,12 +18,12 @@ const headerItems = {
       type: "link",
       icon: (
         <Box h={"30px"} w={"247px"}>
-          <Image src="/icon/logo/gluestack-style-light.svg" alt="Github" fill />
+          <Image src="/icon/logo/bolt-light.svg" alt="Github" fill />
         </Box>
       ),
       darkIcon: (
         <Box h={"30px"} w={"247px"}>
-          <Image src="/icon/logo/gluestack-style-dark.svg" alt="Github" fill />
+          <Image src="/icon/logo/bolt-dark.svg" alt="Github" fill />
         </Box>
       ),
       text: "",
@@ -67,11 +67,11 @@ const headerItems = {
     },
     {
       type: "link",
-      url: "https://discord.com/invite/95qQ84nf6f",
+      url: "https://discord.gg/GEP2gWgd",
       icon: (
         <Image
           src="/icon/social/discord.svg"
-          alt="Github"
+          alt="Discord"
           height="24"
           width="24"
         />
@@ -79,7 +79,7 @@ const headerItems = {
       darkIcon: (
         <Image
           src="/icon/social/discord-dark.svg"
-          alt="Github"
+          alt="Discord"
           height="24"
           width="24"
         />
