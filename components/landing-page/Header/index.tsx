@@ -17,7 +17,7 @@ import Dropdown from "./Dropdown";
 import NextLink from "next/link";
 import { LogoDarkMode } from "@/components/Logos";
 import { CustomNextLink } from "../CustomNextLink";
-import BetaTag from "./ComingSoonTag";
+import ComingSoonTag from "./ComingSoonTag";
 
 const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
   return (
@@ -59,7 +59,7 @@ const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
             >
               <LogoDarkMode />
             </NextLink>
-            <BetaTag />
+            <ComingSoonTag />
             <Box
               ml="$6"
               sx={{

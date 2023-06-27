@@ -76,7 +76,7 @@ export const data = [
 
   {
     name: "Github",
-    link: "https://github.com/gluestack-v2/framework-cli",
+    link: "https://github.com/gluestack/bolt-framework",
     isExternal: true,
     icon: <GitHubIcon w="$4" h="$4" color="white" />,
   },

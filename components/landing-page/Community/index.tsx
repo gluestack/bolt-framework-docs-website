@@ -21,7 +21,7 @@ const communities = [
   {
     name: "GitHub",
     icon: <GitHubIcon color="white" />,
-    link: "https://github.com/gluestack-v2/framework-cli",
+    link: "https://github.com/gluestack/bolt-framework",
     description:
       "To file issues, request features, and contribute, check out our GitHub.",
   },
