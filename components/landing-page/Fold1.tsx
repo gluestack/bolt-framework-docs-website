@@ -41,6 +41,9 @@ const Fold1 = memo(() => {
           "@sm": {
             m: "0 auto",
           },
+          "@md": {
+            maxWidth: 663,
+          },
         }}
       >
         <Heading
@@ -55,27 +58,18 @@ const Fold1 = memo(() => {
               fontSize: "$4xl",
               lineHeight: "$4xl",
               textAlign: "left",
+              maxWidth: 300,
             },
             "@sm": {
               textAlign: "center",
+              alignSelf: "center",
             },
 
             "@md": {
               fontSize: "$6xl",
               lineHeight: "$6xl",
               mx: 50,
-            },
-            "@lg": {
-              mx: 0,
-            },
-            "@xl": {
-              mx: 20,
-            },
-            "@xxl": {
-              mx: 140,
-            },
-            _dark: {
-              color: "white",
+              maxWidth: "100%",
             },
           }}
         >
