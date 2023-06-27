@@ -79,7 +79,7 @@ const Fold1 = memo(() => {
             },
           }}
         >
-          Development environment without the pain
+          The Universal Project Runner
         </Heading>
         <Text
           color="$secondary300_alpha_70"
@@ -103,9 +103,8 @@ const Fold1 = memo(() => {
             },
           }}
         >
-          Bolt runs the dev environment on your machine with the option of
-          running services on the host machine, Docker and inside a VM with a
-          unified API
+          Run Docker containers, child processes, or even encapsulate your
+          entire project within a VM, all under one unified API.
         </Text>
       </VStack>
       <HStack

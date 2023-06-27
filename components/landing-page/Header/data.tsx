@@ -47,7 +47,7 @@ export const dropDownItems = [
   },
   {
     name: "Bolt",
-    description: "Development environment without the pain",
+    description: "The Universal Project Runner",
     icon: (
       <Image
         src="/icon/favicons/bolt.svg"
