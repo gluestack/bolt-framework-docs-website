@@ -11,7 +11,7 @@ function ComingSoonTag() {
       borderRadius="$full"
       borderWidth={1}
       borderColor="$borderDark700"
-      alignSelf="flex-start"
+      alignSelf="center"
       sx={{
         _web: {
           background:
@@ -26,7 +26,7 @@ function ComingSoonTag() {
         color="$textDark50"
         fontWeight="$medium"
       >
-        coming Soon
+        coming soon
       </Text>
     </Box>
   );
