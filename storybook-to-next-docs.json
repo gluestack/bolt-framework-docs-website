@@ -3,12 +3,12 @@
   "repos": [
     {
       "id": "seal-framework-docs-storybook",
-      "gitUrl": "https://github.com/gluestack-v2/seal-framework-docs-storybook.git",
+      "gitUrl": "https://github.com/gluestack/bolt-framework-docs-storybook.git",
       "previewJSPath": "example/storybook/.storybook/preview.js",
       "docsPath": "example/storybook/src",
       "branchName": "main",
       "assetsPath": "example/storybook/public/assets",
-      "repoName": "seal-framework-docs-storybook",
+      "repoName": "bolt-framework-docs-storybook",
       "rootDocs": false,
       "ignoredfolders": [],
       "destinationPath": "/docs"
