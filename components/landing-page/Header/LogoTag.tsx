@@ -31,5 +31,3 @@ export function LogoTag({ tag }: { tag: string }) {
     </Box>
   );
 }
-
-export default ComingSoonTag;
