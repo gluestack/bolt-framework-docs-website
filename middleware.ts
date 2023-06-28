@@ -24,3 +24,4 @@ export function middleware(req: NextRequest) {
 
   return NextResponse.rewrite(url);
 }
+

@@ -17,7 +17,7 @@ import Dropdown from "./Dropdown";
 import NextLink from "next/link";
 import { LogoDarkMode } from "@/components/Logos";
 import { CustomNextLink } from "../CustomNextLink";
-import BetaTag from "./BetaTag";
+import { LogoTag } from "./logoTag";
 
 const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
   return (
@@ -59,7 +59,7 @@ const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
             >
               <LogoDarkMode />
             </NextLink>
-            <BetaTag />
+            <LogoTag tag="alpha" />
             <Box
               ml="$6"
               sx={{

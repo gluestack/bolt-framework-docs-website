@@ -29,48 +29,48 @@ const LandingPageLayout = () => {
       </Box>
       <Head>
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <title>Bolt: Development environment without the pain</title>
+        <title>Bolt: The Universal Project Runner</title>
         <meta
           name="description"
-          content="Bolt runs the dev environment on your machine with the option of running services on the host machine, Docker and inside a VM with a unified API"
+          content="Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
         />
         <meta
           property="og:title"
-          content="Bolt: Development environment without the pain"
+          content="Bolt: The Universal Project Runner"
         />
         <meta
           property="og:description"
-          content="Bolt runs the dev environment on your machine with the option of running services on the host machine, Docker and inside a VM with a unified API"
+          content="Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
         />
         <meta property="og:url" content="https://seal-framework.gluestack.io" />
-        {/* <meta
+        <meta
           property="og:logo"
           content="https://seal-framework.gluestack.io/assets/logo.png"
-        /> */}
+        />
         <meta property="og:site_name" content="Bolt" />
-        {/* <meta
+        <meta
           name="og:image"
-          content="https://seal-framework.gluestack.io/images/og-image.png"
-        /> */}
+          content="https://seal-framework.gluestack.io/og-image.png"
+        />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@gluestack" />
         <meta
           property="twitter:title"
-          content="Bolt: Development environment without the pain"
+          content="Bolt: The Universal Project Runner"
         />
         <meta
           property="twitter:description"
-          content="Bolt runs the dev environment on your machine with the option of running services on the host machine, Docker and inside a VM with a unified API"
+          content="Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
         />
-        {/* <meta
+        <meta
           name="twitter:image"
-          content="https://seal-framework.gluestack.io/images/og-image.png"
-        /> */}
+          content="https://seal-framework.gluestack.io/og-image.png"
+        />
 
         <meta
           name="twitter:image:alt"
-          content="Bolt runs the dev environment on your machine with the option of running services on the host machine, Docker and inside a VM with a unified API"
+          content="Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
         />
         {/* need to update the content below */}
         {/* <meta

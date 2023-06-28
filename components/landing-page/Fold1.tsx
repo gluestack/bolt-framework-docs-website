@@ -5,9 +5,13 @@ import {
   Heading,
   Link as DSLink,
   HStack,
-  Box,
-  CheckIcon,
+  Button,
+  OpenInNewIcon,
+  GitHubIcon,
 } from "@gluestack/design-system";
+import { CustomNextLink } from "./CustomNextLink";
+import CustomArrowForwardIcon from "../CustomArrowForwardIcon";
+import Link from "next/link";
 
 const features = [
   "Utility Props",
@@ -37,6 +41,9 @@ const Fold1 = memo(() => {
           "@sm": {
             m: "0 auto",
           },
+          "@md": {
+            maxWidth: 663,
+          },
         }}
       >
         <Heading
@@ -51,31 +58,22 @@ const Fold1 = memo(() => {
               fontSize: "$4xl",
               lineHeight: "$4xl",
               textAlign: "left",
+              maxWidth: 300,
             },
             "@sm": {
               textAlign: "center",
+              alignSelf: "center",
             },
 
             "@md": {
               fontSize: "$6xl",
               lineHeight: "$6xl",
               mx: 50,
-            },
-            "@lg": {
-              mx: 0,
-            },
-            "@xl": {
-              mx: 20,
-            },
-            "@xxl": {
-              mx: 140,
-            },
-            _dark: {
-              color: "white",
+              maxWidth: "100%",
             },
           }}
         >
-          Development environment without the pain
+          The Universal Project Runner
         </Heading>
         <Text
           color="$secondary300_alpha_70"
@@ -99,83 +97,112 @@ const Fold1 = memo(() => {
             },
           }}
         >
-          Bolt runs the dev environment on your machine with the option of
-          running services on the host machine, Docker and inside a VM with a
-          unified API
+          Run Docker containers, child processes, or even encapsulate your
+          entire project within a VM, all under one unified API.
         </Text>
       </VStack>
-
-      <VStack
+      <HStack
         sx={{
           "@base": {
             mt: "$9",
+            flexDirection: "column",
+            justifyContent: "center",
           },
           "@md": {
-            mt: "$12",
+            mt: 76,
+            justifyContent: "center",
+            flexDirection: "row",
+            alignItems: "flex-start",
           },
         }}
       >
-        <HStack
+        <CustomNextLink
+          href="/docs"
+          style={{
+            textDecoration: "none",
+            // outline: 0,
+            marginBottom: 24,
+            borderRadius: 999,
+          }}
           sx={{
-            "@base": {
-              flexDirection: "column",
-            },
-            "@sm": {
-              flexDirection: "row",
-              margin: "0 auto",
+            outlineWidth: 0,
+            ":focusVisible": {
+              boxShadow:
+                "0px 1px 3px rgba(10, 124, 255, 0.24), 0px 2px 6px rgba(10, 124, 255, 0.24), 0px 4px 8px rgba(10, 124, 255, 0.12), 0px 12px 48px -8px rgba(10, 124, 255, 0.48), inset 1px 1px 2px rgba(255, 255, 255, 0.24)",
             },
           }}
-          space="lg"
-          flexWrap="wrap"
         >
-          {features.map((feature, key) => (
-            <HStack
-              key={key}
-              alignItems="center"
-              space="sm"
-              sx={{
-                "@base": {
-                  mb: "$6",
-                },
-                "@lg": {
-                  mb: 0,
-                },
-              }}
+          <Button
+            focusable={false}
+            accessibilityLabel="Get started"
+            variant="primary"
+            sx={{
+              "@base": {
+                py: "$2.5",
+              },
+              "@md": {
+                width: "auto",
+              },
+            }}
+            px="$6"
+          >
+            <Button.Text
+              fontWeight="$medium"
+              fontSize="$md"
+              lineHeight="$md"
+              color="$textDark50"
+              mr={6}
             >
-              <Box
-                borderRadius="$full"
-                borderWidth="$1"
-                borderColor="$primary500"
-                w="$5"
-                h="$5"
-                alignItems="center"
-                justifyContent="center"
-              >
-                <CheckIcon
-                  sx={{
-                    _dark: {
-                      color: "$primary500",
-                    },
-                  }}
-                  h="$3"
-                  w="$3"
-                />
-              </Box>
-              <Text
-                color="$textDark50"
-                fontSize="$md"
-                sx={{
-                  _dark: {
-                    color: "$textDark50",
-                  },
-                }}
-              >
-                {feature}
-              </Text>
-            </HStack>
-          ))}
-        </HStack>
-      </VStack>
+              Get started
+            </Button.Text>
+            <CustomArrowForwardIcon />
+          </Button>
+        </CustomNextLink>
+
+        <DSLink
+          isExternal={true}
+          href="https://discord.gg/GEP2gWgd"
+          sx={{
+            rounded: "$full",
+            _text: {
+              textDecoration: "none",
+            },
+            "@md": {
+              ml: "$4",
+            },
+            ":focusVisible": {
+              outlineWidth: 0,
+              bg: "$secondary50_alpha_20",
+            },
+          }}
+        >
+          <Button
+            variant="secondary"
+            py="$3"
+            sx={{
+              "@base": {
+                px: 52,
+                py: "$2.5",
+              },
+              "@md": {
+                px: "$6",
+              },
+            }}
+          >
+            <Button.Text
+              // @ts-ignore
+              fontWeight="$medium"
+              fontSize="$md"
+              lineHeight="$md"
+              color="$textDark50"
+              mr={10}
+            >
+              Discord
+            </Button.Text>
+            <OpenInNewIcon color="white" h="$4" w="$4" />
+          </Button>
+        </DSLink>
+      </HStack>
     </VStack>
   );
 });
