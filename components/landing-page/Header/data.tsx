@@ -57,7 +57,7 @@ export const dropDownItems = [
       />
     ),
     link: "https://bolt.gluestack.io",
-    tag: "alpha",
+    tag: "beta",
     isDisabled: true,
   },
 ];
