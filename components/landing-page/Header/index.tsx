@@ -16,8 +16,7 @@ import { MailIcon } from "./images";
 import Dropdown from "./Dropdown";
 import NextLink from "next/link";
 import { LogoDarkMode } from "@/components/Logos";
-import { CustomNextLink } from "../CustomNextLink";
-import { LogoTag } from "./logoTag";
+import { LogoTag } from "./LogoTag";
 
 const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
   return (
