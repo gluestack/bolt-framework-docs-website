@@ -3,7 +3,7 @@ import Meta from "@/components/Meta";
 <Meta pageTitle="Your First Bolt Project | bolt-framework" description="Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API." />
 
 
-import { Link } from '@gluestack/design-system';
+import { Box, AppProvider, Link } from '@gluestack/design-system';
 
 
 
@@ -12,6 +12,15 @@ import { Link } from '@gluestack/design-system';
 ## Table of Contents
 
 Let's create a project that uses Bolt to run a simple ExpressJS server.
+
+<AppProvider>
+  <Box>
+    <video controls width="80%">
+      <source src="/assets/Bolt-Demo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </Box>
+</AppProvider>
 
 - Adding project files
 - Creating Bolt Project
@@ -76,7 +85,7 @@ APP_PORT=9000
 
 ## Creating Bolt Project
 
-Once you have all the files and directories as mentioned above, you can now run `bolt` command to create `bolt.yaml` file.
+Once you have all the files and directories as mentioned above, you can now run `bolt init` command to create `bolt.yaml` file.
 
 ```bash
 $ cd bolt-project
@@ -161,7 +170,7 @@ You can now access your service at [http://localhost:9000](http://localhost:9000
 
 ## Listing Bolt Services
 
-You can also the list of services in your bolt project and their statuses using the `service:list` command.
+You can also see the list of services in your bolt project and their statuses using the `service:list` command.
 
 ```bash
 $ bolt service:list

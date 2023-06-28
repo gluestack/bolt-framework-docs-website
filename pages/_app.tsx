@@ -17,12 +17,12 @@ const headerItems = {
     {
       type: "link",
       icon: (
-        <Box h={"30px"} w={"247px"}>
+        <Box h="$7" w="$24">
           <Image src="/icon/logo/bolt-light.svg" alt="Github" fill />
         </Box>
       ),
       darkIcon: (
-        <Box h={"30px"} w={"247px"}>
+        <Box h="$7" w="$24">
           <Image src="/icon/logo/bolt-dark.svg" alt="Github" fill />
         </Box>
       ),
