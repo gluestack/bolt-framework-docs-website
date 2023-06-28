@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 
 export const config = {
   // matcher: ["/docs/:path*"],
-  mathcer: ["/:path*"],
+  // mathcer: ["/:path*"],
+  matcher: [],
 };
 
 export function middleware(req: NextRequest) {
@@ -24,4 +25,3 @@ export function middleware(req: NextRequest) {
 
   return NextResponse.rewrite(url);
 }
-
