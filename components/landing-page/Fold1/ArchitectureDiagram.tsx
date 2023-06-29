@@ -4,8 +4,18 @@ import React from "react";
 
 function ArchitectureDiagram() {
   return (
-    <Box aspectRatio={1344 / 782}>
-      <Image src="/images/architecture-lp.svg" fill alt="architecture" />
+    <Box alignItems="center">
+      <Box
+        aspectRatio={1344 / 782}
+        width="100%"
+        sx={{
+          "@md": {
+            width: "80%",
+          },
+        }}
+      >
+        <Image src="/images/architecture-lp.svg" fill alt="architecture" />
+      </Box>
     </Box>
   );
 }
