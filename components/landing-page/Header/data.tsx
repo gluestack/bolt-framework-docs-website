@@ -46,7 +46,7 @@ export const dropDownItems = [
     isDisabled: false,
   },
   {
-    name: "Bolt",
+    name: "bolt",
     description: "The Universal Project Runner",
     icon: (
       <Image
