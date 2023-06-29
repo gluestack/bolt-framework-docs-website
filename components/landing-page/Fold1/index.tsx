@@ -7,11 +7,11 @@ import {
   HStack,
   Button,
   OpenInNewIcon,
-  GitHubIcon,
 } from "@gluestack/design-system";
-import { CustomNextLink } from "./CustomNextLink";
-import CustomArrowForwardIcon from "../CustomArrowForwardIcon";
+import { CustomNextLink } from "../CustomNextLink";
+import CustomArrowForwardIcon from "../../CustomArrowForwardIcon";
 import Link from "next/link";
+import ArchitectureDiagram from "./ArchitectureDiagram";
 
 const features = [
   "Utility Props",
@@ -110,6 +110,7 @@ const Fold1 = memo(() => {
           },
           "@md": {
             mt: 76,
+            // mb: "$10",
             justifyContent: "center",
             flexDirection: "row",
             alignItems: "flex-start",
@@ -203,6 +204,7 @@ const Fold1 = memo(() => {
           </Button>
         </DSLink>
       </HStack>
+      <ArchitectureDiagram />
     </VStack>
   );
 });

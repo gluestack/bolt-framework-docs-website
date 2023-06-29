@@ -18,7 +18,11 @@ const LandingPageLayout = () => {
       flex={isOpenSidebar ? 1 : undefined}
     >
       <Box
-        display="block"
+        sx={{
+          _web: {
+            display: "block",
+          },
+        }}
         position="absolute"
         top="0"
         left="0"
@@ -72,11 +76,11 @@ const LandingPageLayout = () => {
           name="twitter:image:alt"
           content="Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
         />
-        {/* need to update the content below */}
-        {/* <meta
+
+        <meta
           name="google-site-verification"
           content="407fPlqhFVvkfGtuTVXUzXwd-Mcri2Lu4PDNwPFrpS4"
-        /> */}
+        />
 
         <link rel="canonical" href="https://bolt.gluestack.io" />
       </Head>
