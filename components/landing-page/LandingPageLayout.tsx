@@ -52,10 +52,7 @@ const LandingPageLayout = () => {
           content="https://bolt.gluestack.io/assets/logo.png"
         />
         <meta property="og:site_name" content="Bolt" />
-        <meta
-          name="og:image"
-          content="https://bolt.gluestack.io/og-image.png"
-        />
+        <meta name="og:image" content="https://bolt.gluestack.io/og-tag.png" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@gluestack" />
@@ -69,7 +66,7 @@ const LandingPageLayout = () => {
         />
         <meta
           name="twitter:image"
-          content="https://bolt.gluestack.io/og-image.png"
+          content="https://bolt.gluestack.io/og-tag.png"
         />
 
         <meta
