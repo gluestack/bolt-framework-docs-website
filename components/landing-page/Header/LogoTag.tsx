@@ -2,7 +2,7 @@ import { Box, Text } from "@gluestack/design-system";
 
 import React from "react";
 
-function ComingSoonTag() {
+export function LogoTag({ tag }: { tag: string }) {
   return (
     <Box
       py="$0.5"
@@ -26,10 +26,8 @@ function ComingSoonTag() {
         color="$textDark50"
         fontWeight="$medium"
       >
-        coming soon
+        {tag}
       </Text>
     </Box>
   );
 }
-
-export default ComingSoonTag;
