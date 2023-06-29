@@ -42,15 +42,15 @@ const LandingPageLayout = () => {
           property="og:description"
           content="Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
         />
-        <meta property="og:url" content="https://seal-framework.gluestack.io" />
+        <meta property="og:url" content="https://bolt.gluestack.io" />
         <meta
           property="og:logo"
-          content="https://seal-framework.gluestack.io/assets/logo.png"
+          content="https://bolt.gluestack.io/assets/logo.png"
         />
         <meta property="og:site_name" content="Bolt" />
         <meta
           name="og:image"
-          content="https://seal-framework.gluestack.io/og-image.png"
+          content="https://bolt.gluestack.io/og-image.png"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -65,7 +65,7 @@ const LandingPageLayout = () => {
         />
         <meta
           name="twitter:image"
-          content="https://seal-framework.gluestack.io/og-image.png"
+          content="https://bolt.gluestack.io/og-image.png"
         />
 
         <meta
@@ -78,7 +78,7 @@ const LandingPageLayout = () => {
           content="407fPlqhFVvkfGtuTVXUzXwd-Mcri2Lu4PDNwPFrpS4"
         /> */}
 
-        <link rel="canonical" href="https://seal-framework.gluestack.io" />
+        <link rel="canonical" href="https://bolt.gluestack.io" />
       </Head>
 
       <Header

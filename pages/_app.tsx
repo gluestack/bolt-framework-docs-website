@@ -46,7 +46,7 @@ const headerItems = {
     // },
     {
       type: "link",
-      url: "https://github.com/gluestack-v2/seal-framework-docs",
+      url: "https://github.com/gluestack/bolt-framework",
       icon: (
         <Image
           src="/icon/social/github.svg"
