@@ -107,10 +107,11 @@ const Fold1 = memo(() => {
             mt: "$9",
             flexDirection: "column",
             justifyContent: "center",
+            mb: "$9",
           },
           "@md": {
             mt: 76,
-            // mb: "$10",
+            mb: "$8",
             justifyContent: "center",
             flexDirection: "row",
             alignItems: "flex-start",
