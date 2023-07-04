@@ -1,6 +1,6 @@
 {
   "name": "seal-framework-docs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "dev": "next dev",
     "build-without-update-docs": "next build",
@@ -14,7 +14,7 @@
     "update-last-storybook-updated-timestamp": "npx json -I -f package.json -e this.lastStorybookUpdatedTimestamp=$(date +%s)"
   },
   "dependencies": {
-    "@gluestack/design-system": "0.4.25",
+    "@gluestack/design-system": "^0.4.36",
     "@gluestack/ui-lucide-icons": "^0.0.1",
     "@gluestack/ui-next-adapter": "^2.1.0",
     "@legendapp/motion": "^2.2.0",
@@ -26,7 +26,7 @@
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
     "js-beautify": "^1.14.7",
-    "next": "13.1.1",
+    "next": "13.3.3",
     "prettier": "^2.8.8",
     "prism-react-renderer": "^1.3.5",
     "react": "18.2.0",
@@ -55,5 +55,5 @@
     "react-live": "2.4.1",
     "simple-git": "^3.19.0"
   },
-  "lastStorybookUpdatedTimestamp": 1687236176247
+  "lastStorybookUpdatedTimestamp": 1688467609653
 }

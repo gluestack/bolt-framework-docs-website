@@ -9,6 +9,8 @@ import {
   Link,
   Nav,
   Button,
+  Flyout,
+  LogoTag,
 } from "@gluestack/design-system";
 import Sidebar from "./Sidebar";
 import { data, dropDownItems } from "./data";
@@ -16,7 +18,6 @@ import { MailIcon } from "./images";
 import Dropdown from "./Dropdown";
 import NextLink from "next/link";
 import { LogoDarkMode } from "@/components/Logos";
-import { LogoTag } from "./LogoTag";
 
 const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
   return (
@@ -68,7 +69,10 @@ const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
                 },
               }}
             >
-              <Dropdown dropDownItems={dropDownItems} />
+              <Flyout
+                values={["ui", "style", "framework", "bolt"]}
+                current="bolt"
+              />
             </Box>
           </HStack>
           <Box

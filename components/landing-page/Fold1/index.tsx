@@ -3,27 +3,17 @@ import {
   Text,
   VStack,
   Heading,
-  Link as DSLink,
+  Link,
   HStack,
   Button,
   OpenInNewIcon,
 } from "@gluestack/design-system";
 import { CustomNextLink } from "../CustomNextLink";
 import CustomArrowForwardIcon from "../../CustomArrowForwardIcon";
-import Link from "next/link";
 import ArchitectureDiagram from "./ArchitectureDiagram";
-
-const features = [
-  "Utility Props",
-  "Precompile Styles",
-  "<15kb gzip",
-  "SSR optimized",
-  "Universal",
-];
 
 const Fold1 = memo(() => {
   return (
-    // @ts-ignore
     <VStack
       pt="$10"
       mb="$20"
@@ -42,7 +32,7 @@ const Fold1 = memo(() => {
             m: "0 auto",
           },
           "@md": {
-            maxWidth: 663,
+            maxWidth: 700,
           },
         }}
       >
@@ -161,7 +151,7 @@ const Fold1 = memo(() => {
           </Button>
         </CustomNextLink>
 
-        <DSLink
+        <Link
           isExternal={true}
           href="https://discord.gg/GEP2gWgd"
           sx={{
@@ -173,7 +163,9 @@ const Fold1 = memo(() => {
               ml: "$4",
             },
             ":focusVisible": {
-              outlineWidth: 0,
+              _web: {
+                outlineWidth: 0,
+              },
               bg: "$secondary50_alpha_20",
             },
           }}
@@ -192,7 +184,6 @@ const Fold1 = memo(() => {
             }}
           >
             <Button.Text
-              // @ts-ignore
               fontWeight="$medium"
               fontSize="$md"
               lineHeight="$md"
@@ -203,7 +194,7 @@ const Fold1 = memo(() => {
             </Button.Text>
             <OpenInNewIcon color="white" h="$4" w="$4" />
           </Button>
-        </DSLink>
+        </Link>
       </HStack>
       <ArchitectureDiagram />
     </VStack>

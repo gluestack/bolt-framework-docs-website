@@ -5,9 +5,13 @@ import Image from "next/image";
 import data from "./docs/versions.json";
 import { useEffect, useRef, useState } from "react";
 import { CustomNextLink } from "@/components/landing-page/CustomNextLink";
-
-import { AppProvider, Box, Layout } from "@gluestack/design-system";
-
+import {
+  AppProvider,
+  Box,
+  HStack,
+  Layout,
+  LogoTag,
+} from "@gluestack/design-system";
 import { MDXProvider } from "@mdx-js/react";
 import React from "react";
 import Script from "next/script";
@@ -17,14 +21,20 @@ const headerItems = {
     {
       type: "link",
       icon: (
-        <Box h="$7" w="$24">
-          <Image src="/icon/logo/bolt-light.svg" alt="Github" fill />
-        </Box>
+        <HStack>
+          <Box h="$7" w="$24">
+            <Image src="/icon/logo/bolt-light.svg" alt="Github" fill />
+          </Box>
+          <LogoTag tag="alpha" />
+        </HStack>
       ),
       darkIcon: (
-        <Box h="$7" w="$24">
-          <Image src="/icon/logo/bolt-dark.svg" alt="Github" fill />
-        </Box>
+        <HStack>
+          <Box h="$7" w="$24">
+            <Image src="/icon/logo/bolt-dark.svg" alt="Github" fill />
+          </Box>
+          <LogoTag tag="alpha" />
+        </HStack>
       ),
       text: "",
       url: "/",

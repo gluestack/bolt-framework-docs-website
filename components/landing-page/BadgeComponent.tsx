@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React from "react";
 import { Box, Text, Badge } from "@gluestack/design-system";
 import NextImage from "next/image";

@@ -1,12 +1,10 @@
 import React from "react";
-// @ts-ignore
-import { Box } from "@gluestack/design-system";
+import { Box, HStack, Newsletter } from "@gluestack/design-system";
 import Header from "./Header";
 import MainContent from "./MainContent";
-import Footer from "./Footer/Footer";
+import Footer from "./Footer";
 import Head from "next/head";
 import BgImage from "./bgImage";
-import NewsletterFold from "./NewsletterFold";
 import BadgeComponent from "./BadgeComponent";
 
 const LandingPageLayout = () => {
@@ -104,10 +102,7 @@ const LandingPageLayout = () => {
           <MainContent />
         </Box>
         <Box display={isOpenSidebar ? "none" : "flex"}>
-          <NewsletterFold />
-        </Box>
-
-        <Box display={isOpenSidebar ? "none" : "flex"}>
+          <Newsletter />
           <Footer />
         </Box>
       </Box>
