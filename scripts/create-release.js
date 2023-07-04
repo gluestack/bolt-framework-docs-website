@@ -6,7 +6,7 @@ const fs = require("fs");
 const path = require("path");
 const simpleGit = require("simple-git");
 
-var pjson = require('../package.json');
+var pjson = require("../package.json");
 
 require("dotenv").config();
 const { Octokit } = require("@octokit/rest");
@@ -19,7 +19,7 @@ let response;
 let releaseBranchName;
 
 const OWNER = "gluestack";
-const REPO = "dank-style-website";
+const REPO = "bolt-framework-docs-website";
 const BASE = "main";
 
 function createBranch(branchName) {
@@ -48,8 +48,7 @@ function createPRforGithub(title) {
 }
 
 function runVersionUpCommand(version) {
-
-  spawnSync('yarn', ['version', `--new-version=${version}`], {
+  spawnSync("yarn", ["version", `--new-version=${version}`], {
     stdio: "inherit",
   });
 
@@ -76,7 +75,7 @@ function runVersionUpCommand(version) {
   // Create a simple-git instance and set the remote URL
   const git = simpleGit({
     baseDir: path.join(__dirname, ".."),
-    remote: `https://${authKey}@github.com/gluestack/dank-style-website.git`,
+    remote: `https://${authKey}@github.com/gluestack/bolt-framework-docs-website.git`,
   });
 
   // Stage the changes
@@ -99,23 +98,26 @@ function runVersionUpCommand(version) {
 
 const currentVersion = pjson.version;
 
-rl.question(`Enter package version: (current verison: ${currentVersion}) `, (version) => {
-  version = version.trim();
-  if (version) {
-    rl.question("Enter summary of fixes: ", (summary) => {
-      if (summary === "") {
-        response = edit("\n\n# Please enter a summary for your changes.", {
-          postfix: ".md",
-        });
-      }
-      console.log(`Version: ${version}`);
-      console.log(`Summary of fixes: ${summary}`);
-      const branchName = `release/${version}`;
-      releaseBranchName = branchName;
-      createBranch(branchName);
+rl.question(
+  `Enter package version: (current verison: ${currentVersion}) `,
+  (version) => {
+    version = version.trim();
+    if (version) {
+      rl.question("Enter summary of fixes: ", (summary) => {
+        if (summary === "") {
+          response = edit("\n\n# Please enter a summary for your changes.", {
+            postfix: ".md",
+          });
+        }
+        console.log(`Version: ${version}`);
+        console.log(`Summary of fixes: ${summary}`);
+        const branchName = `release/${version}`;
+        releaseBranchName = branchName;
+        createBranch(branchName);
 
-      runVersionUpCommand(version);
-      rl.close();
-    });
+        runVersionUpCommand(version);
+        rl.close();
+      });
+    }
   }
-});
+);
