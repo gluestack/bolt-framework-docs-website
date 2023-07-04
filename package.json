@@ -1,6 +1,6 @@
 {
   "name": "seal-framework-docs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "dev": "next dev",
     "build-without-update-docs": "next build",
