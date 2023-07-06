@@ -1,6 +1,6 @@
 {
   "name": "seal-framework-docs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "dev": "next dev",
     "build-without-update-docs": "next build",
@@ -11,7 +11,8 @@
     "eject:gluestack-style_do_not_use": "git clone -b development git@github.com:gluestack/gluestack-style.git gluestack-style ",
     "update-docs": "npx storybook-to-next-docs@latest --configFilePath='storybook-to-next-docs.json'",
     "release": "node scripts/create-release.js",
-    "update-last-storybook-updated-timestamp": "npx json -I -f package.json -e this.lastStorybookUpdatedTimestamp=$(date +%s)"
+    "update-last-storybook-updated-timestamp": "npx json -I -f package.json -e this.lastStorybookUpdatedTimestamp=$(date +%s)",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@gluestack/design-system": "^0.4.37",
@@ -27,6 +28,7 @@
     "eslint-config-next": "13.1.1",
     "js-beautify": "^1.14.7",
     "next": "13.3.3",
+    "next-sitemap": "^4.1.8",
     "prettier": "^2.8.8",
     "prism-react-renderer": "^1.3.5",
     "react": "18.2.0",
@@ -55,5 +57,5 @@
     "react-live": "2.4.1",
     "simple-git": "^3.19.0"
   },
-  "lastStorybookUpdatedTimestamp": 1688470457927
+  "lastStorybookUpdatedTimestamp": 1688643844650
 }
