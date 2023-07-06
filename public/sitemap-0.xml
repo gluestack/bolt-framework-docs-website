@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://bolt.gluestack.io</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/bolt.service.yaml</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/bolt.yaml</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/boltignore</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/boltignore/cli-reference/deploy</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/boltignore/cli-reference/deploy-watch</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/boltignore/cli-reference/down</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/boltignore/cli-reference/env-generate</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/boltignore/cli-reference/exec</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/boltignore/cli-reference/init</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/boltignore/cli-reference/log</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/boltignore/cli-reference/project-info</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/boltignore/cli-reference/project-list</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/boltignore/cli-reference/route-generate</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/boltignore/cli-reference/route-list</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/boltignore/cli-reference/service-add</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/boltignore/cli-reference/service-down</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/boltignore/cli-reference/service-list</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/boltignore/cli-reference/service-up</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/boltignore/cli-reference/up</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/api-reference/ingress</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/getting-started/add-bolt-to-existing-project</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/getting-started/env-management</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/getting-started/installing-the-global-cli</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/getting-started/introduction</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/getting-started/service-management</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/getting-started/terminologies</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/getting-started/your-first-bolt-project</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/tutorial-apps/expo-app</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/tutorial-apps/laravel-app</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/tutorial-apps/laravel-auth-&amp;-my-sql</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/tutorial-apps/next-postgres-pg-admin-app</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://bolt.gluestack.io/docs/tutorial-apps/simple-http-server</loc><lastmod>2023-07-06T11:26:21.482Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+</urlset>

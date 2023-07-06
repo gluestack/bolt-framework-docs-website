@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://bolt.gluestack.io
+
+# Sitemaps
+Sitemap: https://bolt.gluestack.io/sitemap.xml
