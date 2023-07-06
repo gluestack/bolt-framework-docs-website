@@ -71,8 +71,6 @@ It has created a `bolt.yaml` file in our project's root directory.
 envfile: .env.tpl
 project_id: '1687868543060'
 project_name: simpleserver
-default_project_runner: host
-default_service_runner: local
 services: null
 ingress: null
 ```
@@ -98,8 +96,6 @@ Bolt `service:add` command runs and automatically detects the type of service yo
 envfile: .env.tpl
 project_id: '1687868543060'
 project_name: simpleserver
-default_project_runner: host
-default_service_runner: local
 services:
   myapp:
     path: service-one
@@ -110,6 +106,10 @@ ingress: null
 # This is how service-one/bolt.service.yaml looks
 container_name: myapp
 stateless: true
+default_service_runner: local
+supported_service_runners:
+  - local
+  - docker
 service_runners:
   local:
     envfile: .env
@@ -153,8 +153,6 @@ Inorder to run the service in docker when you run `bolt up` command you need to 
 envfile: .env.tpl
 project_id: '1687868543060'
 project_name: simpleserver
-default_project_runner: host
-default_service_runner: docker
 services:
   myapp:
     path: service-one
@@ -172,8 +170,6 @@ Inorder to run the service in local when you run `bolt up` command you need to c
 envfile: .env.tpl
 project_id: '1687868543060'
 project_name: simpleserver
-default_project_runner: host
-default_service_runner: local
 services:
   myapp:
     path: service-one

@@ -80,8 +80,6 @@ It has created a `bolt.yaml` file in our project's root directory.
 envfile: .env.tpl
 project_id: '1687940133023'
 project_name: laravelmysql
-default_project_runner: host
-default_service_runner: local
 services: null
 ingress: null
 ```
@@ -107,8 +105,6 @@ Bolt `service:add` command runs and automatically detects the type of service yo
 envfile: .env.tpl
 project_id: '1687940133023'
 project_name: laravelmysql
-default_project_runner: host
-default_service_runner: local
 services:
   laravel:
     path: services/laravel
@@ -119,6 +115,10 @@ ingress: null
 # This is how services/laravel/bolt.service.yaml looks
 container_name: laravel
 stateless: true
+default_service_runner: local
+supported_service_runners:
+  - local
+  - docker
 service_runners:
   local:
     envfile: .env
@@ -151,8 +151,6 @@ Bolt `service:add` command runs and automatically detects the type of service yo
 envfile: .env.tpl
 project_id: '1687940133023'
 project_name: laravelmysql
-default_project_runner: host
-default_service_runner: local
 services:
   laravel:
     path: services/laravel
@@ -163,9 +161,12 @@ ingress: null
 
 ```yaml
 # This is how services/mysql/bolt.service.yaml looks
-# Note that volumes are not created, we have added it manually to the service
+# Note that volumes are not configured, we have added it manually to the service
 container_name: mysql
 stateless: false
+default_service_runner: docker
+supported_service_runners:
+  - docker
 service_runners:
   docker:
     envfile: .env
