@@ -14,7 +14,7 @@ function ArchitectureDiagram() {
           },
         }}
       >
-        <Image src="/images/architecture-lp.svg" fill alt="architecture" />
+        <Image src="/assets/Bolt.svg" fill alt="architecture" />
       </Box>
     </Box>
   );
