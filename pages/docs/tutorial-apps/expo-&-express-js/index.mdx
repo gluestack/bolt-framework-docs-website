@@ -1,0 +1,216 @@
+import Meta from "@/components/Meta";
+
+<Meta pageTitle="Expo & ExpressJS | bolt-framework" description="Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API." />
+
+
+import { Box, AppProvider, Link } from '@gluestack/design-system';
+
+
+
+# Tutorial: Expo & ExpressJS
+
+This tutorial is about how to run a Expo app on host machine's local environment and ExpressJS app on virtual machine's local environment using bolt.
+
+## Table of Contents
+
+- Objectives
+- Project Structure
+- Initialising the project using Bolt
+- Adding expo app as a Bolt Service
+- Running the Project
+- Listing Bolt Services
+- Monitoring Service Logs
+- Stopping Your Project
+- Repo Link
+
+## Objectives
+
+Here we have an expo app created using `expo init` and we will be running it using bolt.
+
+Our Main objectives are:
+
+- Run this project using bolt in local machine.
+
+## Project Structure
+
+The project structure of our app is as follows:
+
+```bash
+# Below's the directory structure of our project.
+expo-app/
+╰─➤ services/
+  ╰─➤ apis/
+    ╰─➤ express-generator files...
+    ╰─➤ bolt.service.yaml
+  ╰─➤ expo/
+    ╰─➤ expo-generator files...
+    ╰─➤ bolt.service.yaml
+╰─➤ .boltignore
+╰─➤ .env
+╰─➤ .env.tpl
+╰─➤ bolt.yaml
+╰─➤ README.md
+```
+
+## Initialising the project using Bolt
+
+At first we have initialised the project by running `bolt init` command to create `bolt.yaml` file.
+
+```bash
+$ cd expo-express-apis
+$ bolt init
+```
+
+It has created a `bolt.yaml` file in our project's root directory.
+
+```yaml
+envfile: .env.tpl
+project_id: '1687780932260'
+project_name: expo-express-apis
+services: null
+ingress: null
+```
+
+## Adding expo app as a Bolt Service
+
+Now, in order to add expo & apis service as a service in bolt we have executed the following command:
+
+```bash
+$ bolt service:add expo services/expo
+Creating app in service
+Scanning source code
+Detected Expo app
+Installed expo service in ./services/expo
+Verifying metadata for other services..
+Metadata verified
+
+$ bolt service:add apis services/apis
+Creating app in service
+Scanning source code
+Detected Express.js app
+Installed apis service in ./services/expo
+Verifying metadata for other services..
+Metadata verified
+```
+
+Bolt `service:add` command runs and automatically detects the type of service you are using and creates a `bolt.service.yaml` template init & includes the same into your `bolt.yaml` file.
+
+```yaml
+# This is how bolt.yaml file looks after adding all our available services
+envfile: .env.tpl
+project_id: '1687780932260'
+project_name: expo-express-apis
+services:
+  expo:
+    path: services/expo
+  apis:
+    path: services/apis
+ingress: null
+```
+
+```yaml
+# This is how service/bolt.service.yaml looks for expo
+container_name: expo
+stateless: true
+default_service_runner: local
+supported_service_runners:
+  - local
+service_runners:
+  local:
+    envfile: .env
+    build: npm install && npm run web
+```
+
+```yaml
+# This is how service/bolt.service.yaml looks for apis
+container_name: apis
+stateless: true
+default_service_runner: vmlocal
+supported_service_runners:
+  - vmlocal
+  - local
+service_runners:
+  local:
+    envfile: .env
+    build: npm install && npm run start
+    ports:
+      - 3000:3000
+```
+
+## Running the Project
+
+Now, let's run our services using Bolt.
+
+```bash
+# The following command will run the service as per the configuration in bolt.yaml file
+$ bolt up
+
+...
+
+"expo" service is up on local platform
+"apis" service is up on vmlocal platform
+```
+
+By default, the configuration in `bolt.yaml` file is to run the project on local machine.
+
+You can now access:
+
+- expo service at [http://localhost:19006](http://localhost:19006)
+- apis service at [http://localhost:3000](http://localhost:3000)
+
+Running `bolt up` command make internal checks value defined against `default_service_runner` index in each service's `bolt.service.yaml` file.
+Now if you run `bolt up` command it will run the expo service on local & apis service on vmlocal.
+
+## Listing Bolt Services
+
+You can also see the list of services in your bolt project and their statuses using the `service:list` command.
+
+```bash
+$ bolt service:list
+╔═══╤══════════════╤════════╤════════════════╤══════╤═══════════╗
+║ # │ Service Name │ Status │ Service Runner │ Port │ ProcessId ║
+╟───┼──────────────┼────────┼────────────────┼──────┼───────────╢
+║ 1 │ apis         │ down   │ NA             │ NA   │ NA        ║
+╟───┼──────────────┼────────┼────────────────┼──────┼───────────╢
+║ 2 │ expo         │ down   │ NA             │ NA   │ NA        ║
+╚═══╧══════════════╧════════╧════════════════╧══════╧═══════════╝
+```
+
+## Monitoring Service Logs
+
+To monitor logs, use the following commands:
+
+```bash
+# For Expo Service
+$ bolt log expo
+# For APIs Service
+$ bolt log apis
+```
+
+To keep monitoring logs in live mode, use the following command:
+
+```bash
+# For Expo Service
+$ bolt log --follow expo
+# For Express Service
+$ bolt log --follow apis
+```
+
+## Stopping Your Project
+
+To stop your project, you can run the following command:
+
+```bash
+$ bolt down
+>> Stopping expo...
+>> Stopping apis...
+
+...
+
+"expo" is down from local platform
+"apis" is down from vmlocal platform
+```
+
+## Repo Link
+
+To clone the project you can use [bolt-framework-tutorial-apps/examples/expo-express-apis](https://github.com/gluestack/bolt-framework-tutorial-apps/tree/main/examples/expo-express-apis)
