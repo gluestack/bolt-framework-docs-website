@@ -21,7 +21,7 @@ const headerItems = {
     {
       type: "link",
       icon: (
-        <HStack>
+        <HStack alignItems="center">
           <Box h="$7" w="$24">
             <Image src="/icon/logo/bolt-light.svg" alt="Github" fill />
           </Box>
@@ -29,7 +29,7 @@ const headerItems = {
         </HStack>
       ),
       darkIcon: (
-        <HStack>
+        <HStack alignItems="center">
           <Box h="$7" w="$24">
             <Image src="/icon/logo/bolt-dark.svg" alt="Github" fill />
           </Box>
