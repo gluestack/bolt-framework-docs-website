@@ -71,8 +71,6 @@ It has created a `bolt.yaml` file in our project's root directory.
 envfile: .env.tpl
 project_id: '1687868543060'
 project_name: simpleserver
-default_project_runner: host
-default_service_runner: local
 services: null
 ingress: null
 ```
@@ -98,8 +96,6 @@ Bolt `service:add` command runs and automatically detects the type of service yo
 envfile: .env.tpl
 project_id: '1687868543060'
 project_name: simpleserver
-default_project_runner: host
-default_service_runner: local
 services:
   myapp:
     path: service-one
@@ -110,6 +106,10 @@ ingress: null
 # This is how service-one/bolt.service.yaml looks
 container_name: myapp
 stateless: true
+default_service_runner: local
+supported_service_runners:
+  - local
+  - docker
 service_runners:
   local:
     envfile: .env
@@ -131,11 +131,8 @@ Now, let's run our service using Bolt.
 ```bash
 # The following command will run the service as per the configuration in bolt.yaml file
 $ bolt up
->> Creating Ingress simpleserver...
->> No ingress found in config. Skipping route generation...
-$ bolt env:generate
-$ bolt env:generate
-$ sh -c 'npm install && npm run start'
+
+...
 
 "myapp" service is up on local platform
 ```
@@ -153,8 +150,6 @@ Inorder to run the service in docker when you run `bolt up` command you need to 
 envfile: .env.tpl
 project_id: '1687868543060'
 project_name: simpleserver
-default_project_runner: host
-default_service_runner: docker
 services:
   myapp:
     path: service-one
@@ -172,8 +167,6 @@ Inorder to run the service in local when you run `bolt up` command you need to c
 envfile: .env.tpl
 project_id: '1687868543060'
 project_name: simpleserver
-default_project_runner: host
-default_service_runner: local
 services:
   myapp:
     path: service-one
@@ -188,11 +181,11 @@ You can also see the list of services in your bolt project and their statuses us
 
 ```bash
 $ bolt service:list
-╔═══╤══════════════╤════════╤════════════════╤════════════════╤══════╤═══════════╗
-║ # │ Service Name │ Status │ Project Runner │ Service Runner │ Port │ ProcessId ║
-╟───┼──────────────┼────────┼────────────────┼────────────────┼──────┼───────────╢
-║ 1 │ myapp        │ up     │ host           │ local          │ NA   │ 13899     ║
-╚═══╧══════════════╧════════╧════════════════╧════════════════╧══════╧═══════════╝
+╔═══╤══════════════╤════════╤════════════════╤══════╤═══════════╗
+║ # │ Service Name │ Status │ Service Runner │ Port │ ProcessID ║
+╟───┼──────────────┼────────┼────────────────┼──────┼───────────╢
+║ 1 │ myapp        │ up     │ local          │ NA   │ 13899     ║
+╚═══╧══════════════╧════════╧════════════════╧══════╧═══════════╝
 ```
 
 ## Monitoring Service Logs
@@ -218,8 +211,6 @@ $ bolt down
 >> Stopping todo-app...
 
 "myapp" is down from local platform
-
->> todo-app is down.
 ```
 
 ## Repo Link

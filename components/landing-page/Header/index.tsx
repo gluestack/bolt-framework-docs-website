@@ -9,14 +9,15 @@ import {
   Link,
   Nav,
   Button,
+  Flyout,
+  LogoTag,
 } from "@gluestack/design-system";
 import Sidebar from "./Sidebar";
 import { data, dropDownItems } from "./data";
 import { MailIcon } from "./images";
-import Dropdown from "./Dropdown";
 import NextLink from "next/link";
 import { LogoDarkMode } from "@/components/Logos";
-import { LogoTag } from "./LogoTag";
+import { CustomNextLink } from "../CustomNextLink";
 
 const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
   return (
@@ -68,7 +69,10 @@ const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
                 },
               }}
             >
-              <Dropdown dropDownItems={dropDownItems} />
+              <Flyout
+                values={["ui", "style", "framework", "bolt"]}
+                current="bolt"
+              />
             </Box>
           </HStack>
           <Box
@@ -99,7 +103,7 @@ const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
                     },
                   }}
                 >
-                  <Link
+                  {/* <Link
                     href={item.link}
                     isExternal={item.isExternal}
                     px="$3"
@@ -125,8 +129,8 @@ const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
                     >
                       {item.name}
                     </Text>
-                  </Link>
-                  {/* {item.isExternal ? (
+                  </Link> */}
+                  {item.isExternal ? (
                     <Link
                       href={item.link}
                       isExternal={item.isExternal}
@@ -184,7 +188,7 @@ const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
                         </CustomNextLink>
                       )}
                     </Pressable>
-                  )} */}
+                  )}
                 </Box>
               ))}
               <Link href="#subscribe" ml="$3" rounded="$full">

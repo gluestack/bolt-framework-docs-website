@@ -5,8 +5,6 @@ const { withGluestackUI } = require("@gluestack/ui-next-adapter");
 const withPlugins = require("next-compose-plugins");
 const { withExpo } = require("@expo/next-adapter");
 
-
-
 // const { withGluestackUI } = require("@gluestack/ui-next-adapter");
 // const nextConfig = {
 //   reactStrictMode: true,
@@ -14,9 +12,7 @@ const { withExpo } = require("@expo/next-adapter");
 
 // module.exports = withGluestackUI(nextConfig);
 
-
 const withTM = require("next-transpile-modules")([
-
   "react-native-web",
   "react-native",
 
@@ -80,6 +76,9 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   reactStrictMode: true,
+  images: {
+    domains: ["gluestack.io"],
+  },
   webpack5: true,
   webpack: (config) => {
     config.resolve.fallback = { fs: false };
@@ -114,5 +113,5 @@ module.exports = withPlugins([[withTM], [withMDX], [withExpo]], {
     locales: ["en"],
     defaultLocale: "en",
   },
-  ...(nextConfig),
+  ...nextConfig,
 });

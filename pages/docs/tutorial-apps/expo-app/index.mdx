@@ -63,8 +63,6 @@ It has created a `bolt.yaml` file in our project's root directory.
 envfile: .env.tpl
 project_id: '1687780932260'
 project_name: expo-app
-default_project_runner: host
-default_service_runner: local
 services: null
 ingress: null
 ```
@@ -90,8 +88,6 @@ Bolt `service:add` command runs and automatically detects the type of service yo
 envfile: .env.tpl
 project_id: '1687780932260'
 project_name: expo-app
-default_project_runner: host
-default_service_runner: local
 services:
   web:
     path: .
@@ -102,6 +98,9 @@ ingress: null
 # This is how service/bolt.service.yaml looks
 container_name: web
 stateless: true
+default_service_runner: local
+supported_service_runners:
+  - local
 service_runners:
   local:
     envfile: .env
@@ -115,11 +114,8 @@ Now, let's run our service using Bolt.
 ```bash
 # The following command will run the service as per the configuration in bolt.yaml file
 $ bolt up
->> Creating Ingress expo-app...
->> No ingress found in config. Skipping route generation...
-$ bolt env:generate
-$ bolt env:generate
-$ sh -c 'npm install && npm run web'
+
+...
 
 "web" service is up on local platform
 ```
@@ -133,16 +129,25 @@ You can now access service at [http://localhost:19006](http://localhost:19006).
 Inorder to run the service in local when you run `bolt up` command you need to change the `default_service_runner` in `bolt.yaml` file to `local`.
 
 ```yaml
-# This is how bolt.yaml file should look like if you want to run the service on local
-envfile: .env.tpl
-project_id: '1687780932260'
-project_name: expo-app
-default_project_runner: host
+# This is how bolt.service.yaml file should look like if you want to run the service on local
+container_name: todonext
+stateless: true
 default_service_runner: local
-services:
-  web:
-    path: .
-ingress: null
+supported_service_runners:
+  - local
+  - docker
+service_runners:
+  local:
+    envfile: .env
+    build: npm install && npm run dev
+  docker:
+    envfile: .env
+    build: ./run.Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - :/app
+      - /app/todo-next/node_modules/
 ```
 
 Now if you run `bolt up` command it will run the service on local.
@@ -153,11 +158,11 @@ You can also see the list of services in your bolt project and their statuses us
 
 ```bash
 $ bolt service:list
-╔═══╤══════════════╤════════╤════════════════╤════════════════╤══════╤═══════════╗
-║ # │ Service Name │ Status │ Project Runner │ Service Runner │ Port │ ProcessId ║
-╟───┼──────────────┼────────┼────────────────┼────────────────┼──────┼───────────╢
-║ 1 │ web          │ up     │ host           │ local          │ NA   │ 13899     ║
-╚═══╧══════════════╧════════╧════════════════╧════════════════╧══════╧═══════════╝
+╔═══╤══════════════╤════════╤════════════════╤══════╤═══════════╗
+║ # │ Service Name │ Status │ Service Runner │ Port │ ProcessID ║
+╟───┼──────────────┼────────┼────────────────┼──────┼───────────╢
+║ 1 │ web          │ up     │ local          │ NA   │ 13899     ║
+╚═══╧══════════════╧════════╧════════════════╧══════╧═══════════╝
 ```
 
 ## Monitoring Service Logs
