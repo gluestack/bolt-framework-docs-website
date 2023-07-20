@@ -1,1 +1,514 @@
-{"versions":[{"version":"0.1.x","pages":[{"type":"heading","title":"Getting Started","pages":[{"title":"Introduction","pages":[],"id":"/docs/getting-started/introduction","metaData":{"title":"Introduction | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["Bolt: The Universal Project Runner"],"h2Tags":["Why Bolt?"]},{"title":"Terminologies","pages":[],"id":"/docs/getting-started/terminologies","metaData":{"title":"Terminologies | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["Terminologies"],"h2Tags":["Table of Contents","Bolt CLI","Bolt Project","Bolt Project Runner","Bolt Service","Bolt Service Runner"]},{"title":"Installing the Global CLI","pages":[],"id":"/docs/getting-started/installing-the-global-cli","metaData":{"title":"Installing the Global CLI | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["Installing the Global CLI"],"h2Tags":["Prerequisites","Installation Steps"]},{"title":"Your First Bolt Project","pages":[],"id":"/docs/getting-started/your-first-bolt-project","metaData":{"title":"Your First Bolt Project | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["Your First Bolt Project"],"h2Tags":["Table of Contents","Adding project files","Creating Bolt Project","Adding a Bolt Service","Running Bolt Project","Listing Bolt Services","Monitoring Service Logs","Stopping Bolt Project"]},{"title":"Add Bolt to Existing Project","pages":[],"id":"/docs/getting-started/add-bolt-to-existing-project","metaData":{"title":"Add Bolt to Existing Project | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["Add Bolt to Existing Project"],"h2Tags":["Table of Contents","Adding Bolt to a Project","Adding a Project Service as Bolt Service","Running Project via Bolt","Listing Services From Project","Monitoring Service Logs","Stopping Project via bolt"]},{"title":"ENV Management","pages":[],"id":"/docs/getting-started/env-management","metaData":{"title":"ENV Management | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["ENV Management"],"h2Tags":["Introduction","Project Structure","env:generate Command","Usage Example","Summary","Conclusion"]},{"title":"Service Management","pages":[],"id":"/docs/getting-started/service-management","metaData":{"title":"Service Management | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["Service Management"],"h2Tags":["Initialise a Project as Bolt Project","Add a Service as Bolt Service","Listing of Services in a Project","Running a Project","Running only a specific Service in Project","Shutting down only a specific Service in Project","Shutting down a Project","Logging a Service","Monitoring a Service"]}]},{"type":"heading","title":"Tutorials","pages":[{"title":"Simple HTTP Server","pages":[],"id":"/docs/tutorial-apps/simple-http-server","metaData":{"title":"Simple HTTP Server | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["Tutorial: Simple HTTP Server"],"h2Tags":["Table of Contents","Objectives","Project Structure","Initialising the project using Bolt","Adding service-one as a Bolt Service","Running the Project","Running the Project on Docker","Running the Project on Local","Listing Bolt Services","Monitoring Service Logs","Stopping Your Project","Repo Link"]},{"title":"Next Postgres PGAdmin BoltIngress","pages":[],"id":"/docs/tutorial-apps/next-postgres-pgadmin-bolt-ingress","metaData":{"title":"Next Postgres PGAdmin BoltIngress | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["Tutorial: Next Postgres PGAdmin BoltIngress"],"h2Tags":["Table of Contents","Objectives","Project Structure","Initialising the project using Bolt","Adding all the services as Bolt service","Adding Ingress","Running the Project","Running the Project on Virtual Machine","Running the Project on Host Machine","Listing Bolt Services","Monitoring Service Logs","Stopping Your Project","Repo Link"]},{"title":"Expo App","pages":[],"id":"/docs/tutorial-apps/expo-app","metaData":{"title":"Expo App | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["Tutorial: Expo App"],"h2Tags":["Table of Contents","Objectives","Project Structure","Initialising the project using Bolt","Adding expo app as a Bolt Service","Running the Project","Running the Project on Local","Listing Bolt Services","Monitoring Service Logs","Stopping Your Project","Repo Link"]},{"title":"Laravel App","pages":[],"id":"/docs/tutorial-apps/laravel-app","metaData":{"title":"Laravel App | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["Tutorial: Laravel App"],"h2Tags":["Table of Contents","Objectives","Project Structure","Initialising the project using Bolt","Adding service as a Bolt Service","Running the Project","Running the Project on Docker","Running the Project on Local","Listing Bolt Services","Monitoring Service Logs","Stopping Your Project","Repo Link"]},{"title":"Laravel Auth & MySQL","pages":[],"id":"/docs/tutorial-apps/laravel-auth-&-my-sql","metaData":{"title":"Laravel Auth & MySQL | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["Tutorial: Laravel Auth & MySQL"],"h2Tags":["Table of Contents","Objectives","Project Structure","Initialising the project using Bolt","Adding Laravel service as a Bolt Service","Adding MySQL service as a Bolt Service","Running the Project","Listing Bolt Services","Monitoring Service Logs","Stopping Your Project","Repo Link"]},{"title":"Expo & ExpressJS","pages":[],"id":"/docs/tutorial-apps/expo-&-express-js","metaData":{"title":"Expo & ExpressJS | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["Tutorial: Expo & ExpressJS"],"h2Tags":["Table of Contents","Objectives","Project Structure","Initialising the project using Bolt","Adding expo app as a Bolt Service","Running the Project","Listing Bolt Services","Monitoring Service Logs","Stopping Your Project","Repo Link"]}]},{"type":"heading","title":"API Reference","pages":[{"title":"bolt.yaml","pages":[],"id":"/docs/api-reference/bolt.yaml","metaData":{"title":"bolt.yaml | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["Defining Bolt file"],"h2Tags":["Definition"]},{"title":"bolt.service.yaml","pages":[],"id":"/docs/api-reference/bolt.service.yaml","metaData":{"title":"bolt.service.yaml | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["Defining Bolt Service file"],"h2Tags":["Definition"]},{"title":"bolt ingress","pages":[],"id":"/docs/api-reference/ingress","metaData":{"title":"bolt ingress | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["Defining Bolt Ingress Configuration"],"h2Tags":["Definition"]},{"title":"boltignore","pages":[],"id":"/docs/api-reference/boltignore","metaData":{"title":"boltignore | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["Defining Bolt Ignore file"],"h2Tags":null},{"type":"heading","title":"CLI Reference","pages":[{"title":"project:list","pages":[],"id":"/docs/api-reference/boltignore/cli-reference/project-list","metaData":{"title":"project:list | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["project:list"],"h2Tags":null},{"title":"init","pages":[],"id":"/docs/api-reference/boltignore/cli-reference/init","metaData":{"title":"init | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["init"],"h2Tags":null},{"title":"project:info","pages":[],"id":"/docs/api-reference/boltignore/cli-reference/project-info","metaData":{"title":"project:info | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["project:info"],"h2Tags":null},{"title":"env:generate","pages":[],"id":"/docs/api-reference/boltignore/cli-reference/env-generate","metaData":{"title":"env:generate | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["env:generate"],"h2Tags":null},{"title":"up","pages":[],"id":"/docs/api-reference/boltignore/cli-reference/up","metaData":{"title":"up | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["up"],"h2Tags":null},{"title":"down","pages":[],"id":"/docs/api-reference/boltignore/cli-reference/down","metaData":{"title":"down | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["down"],"h2Tags":null},{"title":"log","pages":[],"id":"/docs/api-reference/boltignore/cli-reference/log","metaData":{"title":"log | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["log"],"h2Tags":null},{"title":"service:add","pages":[],"id":"/docs/api-reference/boltignore/cli-reference/service-add","metaData":{"title":"service:add | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["service:add"],"h2Tags":["Service Auto Detection"]},{"title":"service:list","pages":[],"id":"/docs/api-reference/boltignore/cli-reference/service-list","metaData":{"title":"service:list | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["service:list"],"h2Tags":null},{"title":"service:up","pages":[],"id":"/docs/api-reference/boltignore/cli-reference/service-up","metaData":{"title":"service:up | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["service:up"],"h2Tags":null},{"title":"service:down","pages":[],"id":"/docs/api-reference/boltignore/cli-reference/service-down","metaData":{"title":"service:down | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["service:down"],"h2Tags":null},{"title":"route:generate","pages":[],"id":"/docs/api-reference/boltignore/cli-reference/route-generate","metaData":{"title":"route:generate | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["route:generate"],"h2Tags":null},{"title":"route:list","pages":[],"id":"/docs/api-reference/boltignore/cli-reference/route-list","metaData":{"title":"route:list | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["route:list"],"h2Tags":null},{"title":"exec","pages":[],"id":"/docs/api-reference/boltignore/cli-reference/exec","metaData":{"title":"exec | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["exec"],"h2Tags":null},{"title":"deploy","pages":[],"id":"/docs/api-reference/boltignore/cli-reference/deploy","metaData":{"title":"deploy | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["deploy"],"h2Tags":null},{"title":"deploy:watch","pages":[],"id":"/docs/api-reference/boltignore/cli-reference/deploy-watch","metaData":{"title":"deploy:watch | bolt-framework","description":"Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."},"h1Tags":["deploy:watch"],"h2Tags":null}]}]}],"breadcrumbs":null}],"firstPage":"/docs/getting-started/introduction"}
+{
+  "versions": [
+    {
+      "version": "0.1.x",
+      "pages": [
+        {
+          "type": "heading",
+          "title": "Getting Started",
+          "pages": [
+            {
+              "title": "Introduction",
+              "pages": [],
+              "id": "/docs/getting-started/introduction",
+              "metaData": {
+                "title": "Introduction | bolt-framework",
+                "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+              },
+              "h1Tags": ["Bolt: The Universal Project Runner"],
+              "h2Tags": ["Why Bolt?"]
+            },
+            {
+              "title": "Terminologies",
+              "pages": [],
+              "id": "/docs/getting-started/terminologies",
+              "metaData": {
+                "title": "Terminologies | bolt-framework",
+                "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+              },
+              "h1Tags": ["Terminologies"],
+              "h2Tags": [
+                "Table of Contents",
+                "Bolt CLI",
+                "Bolt Project",
+                "Bolt Project Runner",
+                "Bolt Service",
+                "Bolt Service Runner"
+              ]
+            },
+            {
+              "title": "Installing the Global CLI",
+              "pages": [],
+              "id": "/docs/getting-started/installing-the-global-cli",
+              "metaData": {
+                "title": "Installing the Global CLI | bolt-framework",
+                "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+              },
+              "h1Tags": ["Installing the Global CLI"],
+              "h2Tags": ["Prerequisites", "Installation Steps"]
+            },
+            {
+              "title": "Your First Bolt Project",
+              "pages": [],
+              "id": "/docs/getting-started/your-first-bolt-project",
+              "metaData": {
+                "title": "Your First Bolt Project | bolt-framework",
+                "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+              },
+              "h1Tags": ["Your First Bolt Project"],
+              "h2Tags": [
+                "Table of Contents",
+                "Adding project files",
+                "Creating Bolt Project",
+                "Adding a Bolt Service",
+                "Running Bolt Project",
+                "Listing Bolt Services",
+                "Monitoring Service Logs",
+                "Stopping Bolt Project"
+              ]
+            },
+            {
+              "title": "Add Bolt to Existing Project",
+              "pages": [],
+              "id": "/docs/getting-started/add-bolt-to-existing-project",
+              "metaData": {
+                "title": "Add Bolt to Existing Project | bolt-framework",
+                "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+              },
+              "h1Tags": ["Add Bolt to Existing Project"],
+              "h2Tags": [
+                "Table of Contents",
+                "Adding Bolt to a Project",
+                "Adding a Project Service as Bolt Service",
+                "Running Project via Bolt",
+                "Listing Services From Project",
+                "Monitoring Service Logs",
+                "Stopping Project via bolt"
+              ]
+            },
+            {
+              "title": "ENV Management",
+              "pages": [],
+              "id": "/docs/getting-started/env-management",
+              "metaData": {
+                "title": "ENV Management | bolt-framework",
+                "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+              },
+              "h1Tags": ["ENV Management"],
+              "h2Tags": [
+                "Introduction",
+                "Project Structure",
+                "env:generate Command",
+                "Usage Example",
+                "Summary",
+                "Conclusion"
+              ]
+            },
+            {
+              "title": "Service Management",
+              "pages": [],
+              "id": "/docs/getting-started/service-management",
+              "metaData": {
+                "title": "Service Management | bolt-framework",
+                "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+              },
+              "h1Tags": ["Service Management"],
+              "h2Tags": [
+                "Initialise a Project as Bolt Project",
+                "Add a Service as Bolt Service",
+                "Listing of Services in a Project",
+                "Running a Project",
+                "Running only a specific Service in Project",
+                "Shutting down only a specific Service in Project",
+                "Shutting down a Project",
+                "Logging a Service",
+                "Monitoring a Service"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "title": "Tutorials",
+          "pages": [
+            {
+              "title": "Simple HTTP Server",
+              "pages": [],
+              "id": "/docs/tutorial-apps/simple-http-server",
+              "metaData": {
+                "title": "Simple HTTP Server | bolt-framework",
+                "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+              },
+              "h1Tags": ["Tutorial: Simple HTTP Server"],
+              "h2Tags": [
+                "Table of Contents",
+                "Objectives",
+                "Project Structure",
+                "Initialising the project using Bolt",
+                "Adding service-one as a Bolt Service",
+                "Running the Project",
+                "Running the Project on Docker",
+                "Running the Project on Local",
+                "Listing Bolt Services",
+                "Monitoring Service Logs",
+                "Stopping Your Project",
+                "Repo Link"
+              ]
+            },
+            {
+              "title": "Next Postgres PGAdmin BoltIngress",
+              "pages": [],
+              "id": "/docs/tutorial-apps/next-postgres-pgadmin-bolt-ingress",
+              "metaData": {
+                "title": "Next Postgres PGAdmin BoltIngress | bolt-framework",
+                "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+              },
+              "h1Tags": ["Tutorial: Next Postgres PGAdmin BoltIngress"],
+              "h2Tags": [
+                "Table of Contents",
+                "Objectives",
+                "Project Structure",
+                "Initialising the project using Bolt",
+                "Adding all the services as Bolt service",
+                "Adding Ingress",
+                "Running the Project",
+                "Running the Project on Virtual Machine",
+                "Running the Project on Host Machine",
+                "Listing Bolt Services",
+                "Monitoring Service Logs",
+                "Stopping Your Project",
+                "Repo Link"
+              ]
+            },
+            {
+              "title": "Expo App",
+              "pages": [],
+              "id": "/docs/tutorial-apps/expo-app",
+              "metaData": {
+                "title": "Expo App | bolt-framework",
+                "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+              },
+              "h1Tags": ["Tutorial: Expo App"],
+              "h2Tags": [
+                "Table of Contents",
+                "Objectives",
+                "Project Structure",
+                "Initialising the project using Bolt",
+                "Adding expo app as a Bolt Service",
+                "Running the Project",
+                "Running the Project on Local",
+                "Listing Bolt Services",
+                "Monitoring Service Logs",
+                "Stopping Your Project",
+                "Repo Link"
+              ]
+            },
+            {
+              "title": "Laravel App",
+              "pages": [],
+              "id": "/docs/tutorial-apps/laravel-app",
+              "metaData": {
+                "title": "Laravel App | bolt-framework",
+                "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+              },
+              "h1Tags": ["Tutorial: Laravel App"],
+              "h2Tags": [
+                "Table of Contents",
+                "Objectives",
+                "Project Structure",
+                "Initialising the project using Bolt",
+                "Adding service as a Bolt Service",
+                "Running the Project",
+                "Running the Project on Docker",
+                "Running the Project on Local",
+                "Listing Bolt Services",
+                "Monitoring Service Logs",
+                "Stopping Your Project",
+                "Repo Link"
+              ]
+            },
+            {
+              "title": "Laravel Auth & MySQL",
+              "pages": [],
+              "id": "/docs/tutorial-apps/laravel-auth-&-my-sql",
+              "metaData": {
+                "title": "Laravel Auth & MySQL | bolt-framework",
+                "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+              },
+              "h1Tags": ["Tutorial: Laravel Auth & MySQL"],
+              "h2Tags": [
+                "Table of Contents",
+                "Objectives",
+                "Project Structure",
+                "Initialising the project using Bolt",
+                "Adding Laravel service as a Bolt Service",
+                "Adding MySQL service as a Bolt Service",
+                "Running the Project",
+                "Listing Bolt Services",
+                "Monitoring Service Logs",
+                "Stopping Your Project",
+                "Repo Link"
+              ]
+            },
+            {
+              "title": "Expo & ExpressJS",
+              "pages": [],
+              "id": "/docs/tutorial-apps/expo-&-express-js",
+              "metaData": {
+                "title": "Expo & ExpressJS | bolt-framework",
+                "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+              },
+              "h1Tags": ["Tutorial: Expo & ExpressJS"],
+              "h2Tags": [
+                "Table of Contents",
+                "Objectives",
+                "Project Structure",
+                "Initialising the project using Bolt",
+                "Adding expo app as a Bolt Service",
+                "Running the Project",
+                "Listing Bolt Services",
+                "Monitoring Service Logs",
+                "Stopping Your Project",
+                "Repo Link"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "heading",
+          "title": "API Reference",
+          "pages": [
+            {
+              "title": "bolt.yaml",
+              "pages": [],
+              "id": "/docs/api-reference/bolt.yaml",
+              "metaData": {
+                "title": "bolt.yaml | bolt-framework",
+                "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+              },
+              "h1Tags": ["Defining Bolt file"],
+              "h2Tags": ["Definition"]
+            },
+            {
+              "title": "bolt.service.yaml",
+              "pages": [],
+              "id": "/docs/api-reference/bolt.service.yaml",
+              "metaData": {
+                "title": "bolt.service.yaml | bolt-framework",
+                "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+              },
+              "h1Tags": ["Defining Bolt Service file"],
+              "h2Tags": ["Definition"]
+            },
+            {
+              "title": "bolt ingress",
+              "pages": [],
+              "id": "/docs/api-reference/ingress",
+              "metaData": {
+                "title": "bolt ingress | bolt-framework",
+                "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+              },
+              "h1Tags": ["Defining Bolt Ingress Configuration"],
+              "h2Tags": ["Definition"]
+            },
+            {
+              "title": "boltignore",
+              "pages": [],
+              "id": "/docs/api-reference/boltignore",
+              "metaData": {
+                "title": "boltignore | bolt-framework",
+                "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+              },
+              "h1Tags": ["Defining Bolt Ignore file"],
+              "h2Tags": null
+            },
+            {
+              "type": "heading",
+              "title": "CLI Reference",
+              "pages": [
+                {
+                  "title": "project:list",
+                  "pages": [],
+                  "id": "/docs/api-reference/boltignore/cli-reference/project-list",
+                  "metaData": {
+                    "title": "project:list | bolt-framework",
+                    "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+                  },
+                  "h1Tags": ["project:list"],
+                  "h2Tags": null
+                },
+                {
+                  "title": "init",
+                  "pages": [],
+                  "id": "/docs/api-reference/boltignore/cli-reference/init",
+                  "metaData": {
+                    "title": "init | bolt-framework",
+                    "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+                  },
+                  "h1Tags": ["init"],
+                  "h2Tags": null
+                },
+                {
+                  "title": "project:info",
+                  "pages": [],
+                  "id": "/docs/api-reference/boltignore/cli-reference/project-info",
+                  "metaData": {
+                    "title": "project:info | bolt-framework",
+                    "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+                  },
+                  "h1Tags": ["project:info"],
+                  "h2Tags": null
+                },
+                {
+                  "title": "env:generate",
+                  "pages": [],
+                  "id": "/docs/api-reference/boltignore/cli-reference/env-generate",
+                  "metaData": {
+                    "title": "env:generate | bolt-framework",
+                    "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+                  },
+                  "h1Tags": ["env:generate"],
+                  "h2Tags": null
+                },
+                {
+                  "title": "up",
+                  "pages": [],
+                  "id": "/docs/api-reference/boltignore/cli-reference/up",
+                  "metaData": {
+                    "title": "up | bolt-framework",
+                    "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+                  },
+                  "h1Tags": ["up"],
+                  "h2Tags": null
+                },
+                {
+                  "title": "down",
+                  "pages": [],
+                  "id": "/docs/api-reference/boltignore/cli-reference/down",
+                  "metaData": {
+                    "title": "down | bolt-framework",
+                    "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+                  },
+                  "h1Tags": ["down"],
+                  "h2Tags": null
+                },
+                {
+                  "title": "log",
+                  "pages": [],
+                  "id": "/docs/api-reference/boltignore/cli-reference/log",
+                  "metaData": {
+                    "title": "log | bolt-framework",
+                    "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+                  },
+                  "h1Tags": ["log"],
+                  "h2Tags": null
+                },
+                {
+                  "title": "service:add",
+                  "pages": [],
+                  "id": "/docs/api-reference/boltignore/cli-reference/service-add",
+                  "metaData": {
+                    "title": "service:add | bolt-framework",
+                    "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+                  },
+                  "h1Tags": ["service:add"],
+                  "h2Tags": ["Service Auto Detection"]
+                },
+                {
+                  "title": "service:list",
+                  "pages": [],
+                  "id": "/docs/api-reference/boltignore/cli-reference/service-list",
+                  "metaData": {
+                    "title": "service:list | bolt-framework",
+                    "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+                  },
+                  "h1Tags": ["service:list"],
+                  "h2Tags": null
+                },
+                {
+                  "title": "service:up",
+                  "pages": [],
+                  "id": "/docs/api-reference/boltignore/cli-reference/service-up",
+                  "metaData": {
+                    "title": "service:up | bolt-framework",
+                    "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+                  },
+                  "h1Tags": ["service:up"],
+                  "h2Tags": null
+                },
+                {
+                  "title": "service:down",
+                  "pages": [],
+                  "id": "/docs/api-reference/boltignore/cli-reference/service-down",
+                  "metaData": {
+                    "title": "service:down | bolt-framework",
+                    "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+                  },
+                  "h1Tags": ["service:down"],
+                  "h2Tags": null
+                },
+                {
+                  "title": "route:generate",
+                  "pages": [],
+                  "id": "/docs/api-reference/boltignore/cli-reference/route-generate",
+                  "metaData": {
+                    "title": "route:generate | bolt-framework",
+                    "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+                  },
+                  "h1Tags": ["route:generate"],
+                  "h2Tags": null
+                },
+                {
+                  "title": "route:list",
+                  "pages": [],
+                  "id": "/docs/api-reference/boltignore/cli-reference/route-list",
+                  "metaData": {
+                    "title": "route:list | bolt-framework",
+                    "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+                  },
+                  "h1Tags": ["route:list"],
+                  "h2Tags": null
+                },
+                {
+                  "title": "exec",
+                  "pages": [],
+                  "id": "/docs/api-reference/boltignore/cli-reference/exec",
+                  "metaData": {
+                    "title": "exec | bolt-framework",
+                    "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+                  },
+                  "h1Tags": ["exec"],
+                  "h2Tags": null
+                },
+                {
+                  "title": "deploy",
+                  "pages": [],
+                  "id": "/docs/api-reference/boltignore/cli-reference/deploy",
+                  "metaData": {
+                    "title": "deploy | bolt-framework",
+                    "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+                  },
+                  "h1Tags": ["deploy"],
+                  "h2Tags": null
+                },
+                {
+                  "title": "deploy:watch",
+                  "pages": [],
+                  "id": "/docs/api-reference/boltignore/cli-reference/deploy-watch",
+                  "metaData": {
+                    "title": "deploy:watch | bolt-framework",
+                    "description": "Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API."
+                  },
+                  "h1Tags": ["deploy:watch"],
+                  "h2Tags": null
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "breadcrumbs": null
+    }
+  ],
+  "firstPage": "/docs/getting-started/introduction"
+}

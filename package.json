@@ -1,6 +1,6 @@
 {
   "name": "seal-framework-docs",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "dev": "next dev",
     "build-without-update-docs": "next build",
@@ -57,5 +57,5 @@
     "react-live": "2.4.1",
     "simple-git": "^3.19.0"
   },
-  "lastStorybookUpdatedTimestamp": 1688643844650
+  "lastStorybookUpdatedTimestamp": 1689580928336
 }
