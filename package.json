@@ -1,6 +1,6 @@
 {
   "name": "seal-framework-docs",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "scripts": {
     "dev": "next dev",
     "build-without-update-docs": "next build",
@@ -15,7 +15,7 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@gluestack/design-system": "^0.4.46",
+    "@gluestack/design-system": "^0.4.49",
     "@gluestack/ui-lucide-icons": "^0.0.1",
     "@gluestack/ui-next-adapter": "^2.1.0",
     "@legendapp/motion": "^2.2.0",
@@ -57,5 +57,5 @@
     "react-live": "2.4.1",
     "simple-git": "^3.19.0"
   },
-  "lastStorybookUpdatedTimestamp": 1689834906849
+  "lastStorybookUpdatedTimestamp": 1689932884203
 }
