@@ -102,3 +102,38 @@ ingress:
 #### proxy_set_header_x_forwarded_proto (optional)
 
 `proxy_set_header_x_forwarded_proto` is the forwarded proto header that you want to use. Its default value is `$scheme`.
+
+## Ways to set environment variables in Bolt Ingress
+
+Bolt Ingress allows you to use environment variables in the configuration using `${YOUR_VARIABLE_NAME}` syntax.
+
+Bolt Ingress picks up environment variables from project's root `.env` file which is generated from `.env.tpl` file. Learn more about environment management [here](/docs/references/env-management).
+
+You can use environment variables by using the following syntax —
+
+```yaml
+# File location: ./bolt.yaml
+envfile: .env.tpl
+project_id: '1689657879944'
+project_name: sample-project
+services:
+  one:
+    path: ./services/one
+  two:
+    path: ./services/two
+ingress:
+  - domain: one.local.gluestack.app
+    port: 8001
+    options:
+      - location: /
+        rewrite_key: ^/(.*)
+        rewrite_value: /$1
+        proxy_pass: http://localhost:${ONE_APP_PORT}
+  - domain: two.local.gluestack.app
+    port: 8002
+    options:
+      - location: /
+        rewrite_key: ^/(.*)
+        rewrite_value: /$1
+        proxy_pass: http://localhost:${TWO_APP_PORT}
+```

@@ -150,3 +150,42 @@ This is an array of strings. Each string contains a port mapping. The first part
 This is an array of strings. Each string contains a volume mount path. The first part of the string is the path to the directory in your host machine. The second part of the string is the path to the directory in your docker container.
 
 > Note: This is an optional field. If you don't want to mount any volume, you can skip this field.
+
+## Ways to set environment variables in Bolt Service
+
+Bolt allows you to use environment variables in the configuration using `${YOUR_VARIABLE_NAME}` syntax.
+
+Bolt Service picks up environment variables for each service runner's `envfile` attribute, which is basically reference to `.env` file containing all the environment variables of the same container. Learn more about environment management [here](/docs/references/env-management).
+
+You can use environment variables by using the following syntax —
+
+```env
+# File location: ./services/.env
+APP_PORT=4002
+LOCAL_BUILD_COMMAND="npm install && npm start"
+DOCKER_BUILD_FILEPATH="./run.Dockerfile"
+```
+
+```yaml
+# File location: ./services/bolt.service.yaml
+container_name: servicename
+stateless: true
+default_service_runner: docker
+supported_service_runners:
+  - local
+  - docker
+service_runners:
+  local:
+    envfile: .env
+    build: ${LOCAL_BUILD_COMMAND}
+    ports:
+      - ${APP_PORT}:4002
+  docker:
+    envfile: .env
+    build: ${DOCKER_BUILD_FILEPATH}
+    ports:
+      - ${APP_PORT}:4002
+    volumes:
+      - ./services/todo-two:/app/todo-two
+      - /app/todo-two/node_modules
+```
