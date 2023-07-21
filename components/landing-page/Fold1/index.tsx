@@ -126,6 +126,7 @@ const Fold1 = memo(() => {
         >
           <Button
             focusable={false}
+            pointerEvents="none"
             accessibilityLabel="Get started"
             variant="primary"
             sx={{
