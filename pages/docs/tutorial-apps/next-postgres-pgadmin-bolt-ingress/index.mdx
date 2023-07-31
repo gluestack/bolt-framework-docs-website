@@ -14,7 +14,10 @@ This tutorial is about how to run a Next.js Postgress and PgAdmin in a project u
 <AppProvider>
   <Box>
     <video controls width="80%">
-      <source src="/assets/NextVMBoltIngress.mp4" type="video/mp4" />
+      <source
+        src="https://static.gluestack.io/assets/NextVMBoltIngress.mp4"
+        type="video/mp4"
+      />
       Your browser does not support the video tag.
     </video>
   </Box>
@@ -177,7 +180,7 @@ Now, let's run our services using Bolt.
 $ bolt up
 ```
 
-Now this command will first run the services as per their configurations inside `bolt.service.yaml` for each each serivce. After that, bolt will create a nginx configuration file named as `bolt.nginx.conf` in your project's root directory and run the **Nginx server** on your host machine's **Docker**.
+Now this command will first run the services as per their configurations inside `bolt.service.yaml` for each service. After that, bolt will create a nginx configuration file named as `bolt.nginx.conf` in your project's root directory and run the **Nginx server** on your host machine's **Docker**.
 
 ## Running the Project on Virtual Machine
 
