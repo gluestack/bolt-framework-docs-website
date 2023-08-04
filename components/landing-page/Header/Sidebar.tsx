@@ -4,12 +4,31 @@ import {
   VStack,
   Sidebar as SidebarMain,
   HStack,
+  ecosystemData,
 } from "@gluestack/design-system";
 import Link from "next/link";
 import React, { useState } from "react";
+import NextImage from "next/image";
 
-function Sidebar({ data, dropDownItems, setIsOpenSidebar }: any) {
+function Sidebar({ data, values, current, setIsOpenSidebar }: any) {
   const [isCollapsible, setIsCollapsible] = useState(false);
+  let keys = Object.keys(ecosystemData) as any;
+
+  keys = keys.filter((element: any) => values.includes(element));
+  let selectedItemId = "";
+
+  if (keys.includes(current)) {
+    const k = keys.findIndex((val: any) => val === current);
+    const temp = keys[k];
+
+    keys[k] = keys[keys.length - 1];
+    keys[keys.length - 1] = temp;
+
+    selectedItemId = ecosystemData[current].id;
+  }
+
+  const cardsData = keys.map((key: any) => ecosystemData[key]);
+
   return (
     <SidebarMain
       overflow="scroll"
@@ -61,7 +80,7 @@ function Sidebar({ data, dropDownItems, setIsOpenSidebar }: any) {
           /> */}
         </HStack>
         <Box ml="$4">
-          {dropDownItems?.map((item: any, index: number) => (
+          {cardsData?.map((item: any, index: number) => (
             <SidebarMain.GroupItem
               key={index + item.name}
               w="$full"
@@ -86,7 +105,13 @@ function Sidebar({ data, dropDownItems, setIsOpenSidebar }: any) {
                   >
                     {item.name}
                   </Text>
-                  {item.icon}
+                  <NextImage
+                    src={item.icon}
+                    width={20}
+                    height={20}
+                    alt={`${item.name} logo`}
+                  />
+
                   {item.tag && (
                     <Box
                       style={{

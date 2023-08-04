@@ -1596,10 +1596,10 @@
   dependencies:
     "@gluestack-ui/utils" "^0.1.5"
 
-"@gluestack/design-system@^0.4.49":
-  version "0.4.49"
-  resolved "https://registry.yarnpkg.com/@gluestack/design-system/-/design-system-0.4.49.tgz#0f1487d79e3fe61aa5eb145beff5b5a2e41334a6"
-  integrity sha512-ygrywNju2SUl9YXLjKHuwF/o52Lf7hsXb0ATBF0IwgtG6SluRFU1DWZV1eaamVhrXHWV/SjG7p0uNAyBxU9nQA==
+"@gluestack/design-system@0.4.51":
+  version "0.4.51"
+  resolved "https://registry.yarnpkg.com/@gluestack/design-system/-/design-system-0.4.51.tgz#e1b5aaa98279562b3d08810a4ce195ff5448f03b"
+  integrity sha512-bUpMh4OOogRMmNzNBx5R8sZnTxnSL73kg3gTFEBlypzPSFAzi8aekmsEG8fr8UDAJmUsG3pUisztflrMyo5QOw==
   dependencies:
     "@expo/html-elements" "0.3.0"
     "@gluestack-style/animation-plugin" "^0.1.7"
