@@ -1,0 +1,439 @@
+import Meta from "@/components/Meta";
+
+<Meta pageTitle="Nest Expo Postgres Pgadmin | bolt-framework" description="Run Docker containers, child processes, or even encapsulate your entire project within a VM, all under one unified API." />
+
+
+import { Box, AppProvider, Link } from '@gluestack/design-system';
+
+
+
+# Tutorial: Nest Expo Postgres Pgadmin
+
+This tutorial is about how to run a Nest Postgres PgAdmin on docker and Expo on our local using bolt. Below's the video showing how to run this tutorial.
+
+<AppProvider>
+  <Box>
+    <video controls width="100%">
+      <source
+        src="https://static.gluestack.io/assets/nest-pgadmin-postgres.mp4"
+        type="video/mp4"
+      />
+      Your browser does not support the video tag.
+    </video>
+  </Box>
+</AppProvider>
+
+## Table of Contents
+
+- Objectives
+- Project Structure
+- Initialising the project using Bolt
+- Adding service as a Bolt Service
+- Running the Project
+- Running the Project on Docker
+- Running the Project on Local
+- Listing Bolt Services
+- Monitoring Service Logs
+- Stopping Your Project
+- Repo Link
+
+## Objectives
+
+Here we have created a project where we have one service called `todofe` which is a Expo app.
+
+Our Main objectives are:
+
+- Run this project using bolt in local machine.
+- Run this project using bolt in docker.
+
+## Project Structure
+
+The project structure of our app is as follows:
+
+```bash
+# Below's the directory structure of our project.
+nest-expo-postgres-pgadmin/
+╰─➤ services/
+  ╰─➤ pgadmin/
+    ╰─➤ bolt.service.yaml
+  ╰─➤ postgres/
+    ╰─➤ bolt.service.yaml
+  ╰─➤ todo-backend/
+    ╰─➤ nest-generator files...
+    ╰─➤ bolt.service.yaml
+  ╰─➤ TodoApp/
+    ╰─➤ expo-generator files...
+    ╰─➤ bolt.service.yaml
+╰─➤ .boltignore
+╰─➤ .env
+╰─➤ .env.tpl
+╰─➤ bolt.yaml
+╰─➤ README.md
+```
+
+## Initialising the project using Bolt
+
+At first we have initialised the project by running `bolt init` command to create `bolt.yaml` file.
+
+```bash
+$ cd nest-expo-postgres-pgadmin
+$ bolt init
+```
+
+It has created a `bolt.yaml` file in our project's root directory.
+
+```yaml
+envfile: .env.tpl
+project_id: "1690896394872"
+project_name: nest-expo-postgres-pgadmin
+services: null
+ingress: null
+```
+
+## Adding service as a Bolt Service
+
+Now, in order to add service as a service in bolt we have executed the following command:
+
+```bash
+$ bolt service:add pgadmin services/pgadmin
+Creating app in services/pgadmin
+Scanning source code
+Detected an Unknown app
+Manually edit "bolt.service.yaml", "run.Dockerfile", "build.Dockerfile"
+Installed pgadmin service in services/pgadmin
+Verifying metadata for other services..
+Metadata verified
+```
+
+```bash
+$ bolt service:add postgres services/postgres
+Creating app in services/postgres
+Scanning source code
+Detected an Postgres app
+Manually edit "bolt.service.yaml", "run.Dockerfile", "build.Dockerfile"
+Installed postgres service in services/postgres
+Verifying metadata for other services..
+Metadata verified
+```
+
+```bash
+$ bolt service:add todofe services/todofe
+Creating app in services/todofe
+Scanning source code
+Detected Expo app
+Installed todofe service in services/todofe
+Verifying metadata for other services..
+Metadata verified
+```
+
+```bash
+$ bolt service:add todobackend services/todobe
+Creating app in services/todobe
+Scanning source code
+Detected an Unknown app
+Manually edit "bolt.service.yaml", "run.Dockerfile", "build.Dockerfile"
+Installed todobackend service in services/todobe
+Verifying metadata for other services..
+Metadata verified
+```
+
+Bolt `service:add` command runs and automatically detects the type of service you are using and creates a `bolt.service.yaml` template init & includes the same into your `bolt.yaml` file.
+
+```yaml
+# This is how bolt.yaml file looks after adding service as a service
+envfile: .env.tpl
+project_id: "1690896394872"
+project_name: nest-expo-postgres-pgadmin
+services:
+  todobe:
+    path: services/backend
+  pgadmin:
+    path: services/pgadmin
+  postgres:
+    path: services/postgres
+  todofe:
+    path: services/webui
+ingress: null
+```
+
+Each services has their own bolt.service.yaml file, here we have configured it as per our requirement.
+
+We have configured run.dockerfile and build.dockerfile for **PGAdmin Postgres and Nest** to run them in Docker. And **Expo** app to run on Local.
+
+## Adding Ingress
+
+We have added ingress configuration for our project inside `bolt.yaml` file to access our services from outside.
+
+```yaml
+# This is how bolt.yaml file looks finally after adding ingress configuration
+envfile: .env.tpl
+project_id: "1690896394872"
+project_name: nest-expo-postgres-pgadmin
+services:
+  todobe:
+    path: services/backend
+  pgadmin:
+    path: services/pgadmin
+  postgres:
+    path: services/postgres
+  todofe:
+    path: services/webui
+ingress:
+  - domain: bolttodo.local.gluestack.app
+    port: 8000
+    options:
+      - location: /
+        rewrite_key: ^/(.*)
+        rewrite_value: /$1
+        proxy_pass: http://${TODOBE_ASSIGNED_HOST}:${TODOBE_ASSIGNED_PORT}
+  - domain: bolttodo-pgadmin.local.gluestack.app
+    port: 8001
+    options:
+      - location: /
+        rewrite_key: ^/(.*)
+        rewrite_value: /$1
+        proxy_pass: http://${PGADMIN_ASSIGNED_HOST}:${PGADMIN_ASSIGNED_PORT}
+  - domain: bolttodo-postgres.local.gluestack.app
+    port: 8002
+    options:
+      - location: /
+        rewrite_key: ^/(.*)
+        rewrite_value: /$1
+        proxy_pass: http://${POSTGRES_ASSIGNED_HOST}:${POSTGRES_ASSIGNED_PORT}
+  - domain: bolt-expo.local.gluestack.app
+    port: 8003
+    options:
+      - location: /
+        rewrite_key: ^/(.*)
+        rewrite_value: /$1
+        proxy_pass: http://${TODOFE_ASSIGNED_HOST}:${TODOFE_ASSIGNED_PORT_1}
+vm:
+  name: nestexpopostgrespgadmin
+```
+
+## Running the Project
+
+Now, let's run our services using Bolt.
+
+```bash
+# The following command will run the service as per the configuration in bolt.yaml file
+$ bolt up
+```
+
+Now this command will first run the services as per their configurations inside `bolt.service.yaml` for each each serivce. After that, bolt will create a nginx configuration file named as `bolt.nginx.conf` in your project's root directory and run the **Nginx server** on your host machine's **Docker**.
+
+## Running the Project on Docker
+
+Below's our `bolt.service.yaml` files for all four services configured to run on docker as well as local for your reference.
+
+```yaml
+# This is bolt.service.yaml file for PGAdmin
+container_name: pgadmin
+stateless: true
+default_service_runner: docker
+depends_on:
+  - postgres
+service_discovery_offset:
+  - 8080
+supported_service_runners:
+  - docker
+service_runners:
+  docker:
+    envfile: .env
+    build: ./run.Dockerfile
+    ports:
+      - ${ASSIGNED_PORT}:8080
+```
+
+```yaml
+container_name: postgres
+stateless: false
+default_service_runner: docker
+service_discovery_offset:
+  - 5432
+supported_service_runners:
+  - docker
+service_runners:
+  docker:
+    envfile: .env
+    build: ./run.Dockerfile
+    ports:
+      - ${ASSIGNED_PORT}:5432
+    volumes:
+      - ./services/postgres/init.db/:/docker-entrypoint-initdb.d/
+```
+
+```yaml
+# This is bolt.service.yaml file for backend
+container_name: todobe
+stateless: true
+default_service_runner: docker
+depends_on:
+  - postgres
+service_discovery_offset:
+  - 3000
+supported_service_runners:
+  - local
+  - docker
+service_runners:
+  local:
+    envfile: .env
+    build: npm install && npm run start:dev
+    ports:
+      - ${ASSIGNED_PORT}:${ASSIGNED_PORT}
+  docker:
+    envfile: .env
+    build: ./run.Dockerfile
+    ports:
+      - ${ASSIGNED_PORT}:3000
+```
+
+```yaml
+# This is bolt.service.yaml file for webui
+container_name: todofe
+stateless: true
+default_service_runner: local
+depends_on:
+  - todobe
+service_discovery_offset:
+  - 19000
+  - 19006
+supported_service_runners:
+  - local
+service_runners:
+  local:
+    envfile: .env
+    build: npm install && npm run web
+    ports:
+      - ${ASSIGNED_PORT}:${ASSIGNED_PORT}
+      - ${ASSIGNED_PORT_1}:${ASSIGNED_PORT_1}
+```
+We have introduced a `depends_on` key within the webui service, establishing a dependency on the todobe service. This ensures that our todofe will only be brought up once todobe is running.
+Given that both the todobe and pgadmin services rely on the postgres service, it follows that the pgadmin and todobe services will be initiated subsequent to the availability of the postgres service.
+
+## Running the Project
+
+Now, let's run our services using Bolt.
+
+```bash
+# The following command will run the service as per the configuration in bolt.yaml file
+$ bolt up
+
+...
+
+"todofe" service is up on local platform
+"todobe" service is up on docker platform
+"pgadmin" service is up on docker platform
+"postgres" service is up on docker platform
+```
+
+By default, the configuration in `bolt.yaml` file is to run the project on local machine.
+
+You can now access:
+
+- todofe service at [http://localhost:19006](http://localhost:19006)
+- todobe service at [http://localhost:3000](http://localhost:3000)
+- pgadmin service at [http://localhost:8080](http://localhost:8080)
+
+Running `bolt up` command make internal checks value defined against `default_service_runner` index in each service's `bolt.service.yaml` file.
+Now if you run `bolt up` command it will run the todofe service on local & todobackend , postgres & pgadmin service on docker.
+
+## Listing Bolt Services
+
+You can also see the list of services in your bolt project and their statuses using the `service:list` command.
+
+```bash
+$ bolt service:list
+╔═══╤══════════════╤════════╤════════════════╤═══════╤═══════════╗
+║ # │ Service Name │ Status │ Service Runner │ Port  │ ProcessId ║
+╟───┼──────────────┼────────┼────────────────┼───────┼───────────╢
+║ 1 │ todobe       │ up     │ docker         │ 3000  │ todobe    ║
+╟───┼──────────────┼────────┼────────────────┼───────┼───────────╢
+║ 2 │ pgadmin      │ up     │ docker         │ 8080  │ pgadmin   ║
+╟───┼──────────────┼────────┼────────────────┼───────┼───────────╢
+║ 3 │ postgres     │ up     │ docker         │ 5432  │ postgres  ║
+╟───┼──────────────┼────────┼────────────────┼───────┼───────────╢
+║ 4 │ todofe       │ up     │ local          │ 19000 │ 40167     ║
+║   │              │        │                │ 19006 │           ║
+╚═══╧══════════════╧════════╧════════════════╧═══════╧═══════════╝
+```
+
+## Monitoring Service Logs
+
+To monitor logs, use the following commands:
+
+```bash
+# For todofe Service
+$ bolt log todofe
+# For todobe Service
+$ bolt log todobe
+# For pgadmin Service
+$ bolt log pgadmin
+# For postgres Service
+$ bolt log postgres
+```
+
+To keep monitoring logs in live mode, use the following command:
+
+```bash
+# For todofe Service
+$ bolt log --follow todofe
+# For todobe Service
+$ bolt log --follow todobe
+# For pgadmin Service
+$ bolt log --follow pgadmin
+# For postgres Service
+$ bolt log --follow postgres
+```
+
+## Stopping Your Project
+
+To stop your project, you can run the following command:
+
+This command will terminate all the services running via bolt in the project.
+
+```bash
+$ bolt down
+>> Stopping bolttodo...
+>> Stopping Docker Container...
+>> Stopping Docker Container...
+>> Stopping Docker Container...
+
+"todofe" is down from local platform
+
+postgres
+>> Done with stopping Docker Container...
+>> Removing Docker Container...
+postgres
+>> Done with removing Docker Container...
+
+"postgres" is down from docker platform
+
+pgadmin
+>> Done with stopping Docker Container...
+>> Removing Docker Container...
+pgadmin
+>> Done with removing Docker Container...
+
+"pgadmin" is down from docker platform
+
+todobe
+>> Done with stopping Docker Container...
+>> Removing Docker Container...
+todobe
+>> Done with removing Docker Container...
+
+"todobe" is down from docker platform
+
+>> Stopping Docker Container...
+boltingress
+>> Done with stopping Docker Container...
+>> Removing Docker Container...
+Error response from daemon: No such container: boltingress
+>> Done with removing Docker Container...
+>> bolttodo is down.
+```
+
+## Repo Link
+
+To clone the project you can use [bolt-framework-tutorial-apps/examples/nest-expo-postgres-pgadmin](https://github.com/gluestack/bolt-framework-tutorial-apps/tree/main/examples/nest-expo-postgres-pgadmin)
