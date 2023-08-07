@@ -15,7 +15,7 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "@gluestack/design-system": "0.4.51",
+    "@gluestack/design-system": "0.4.53-alpha.0",
     "@gluestack/ui-lucide-icons": "^0.0.1",
     "@gluestack/ui-next-adapter": "^2.1.0",
     "@legendapp/motion": "^2.2.0",
