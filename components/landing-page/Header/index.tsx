@@ -13,7 +13,7 @@ import {
   LogoTag,
 } from "@gluestack/design-system";
 import Sidebar from "./Sidebar";
-import { data, dropDownItems } from "./data";
+import { data } from "./data";
 import { MailIcon } from "./images";
 import NextLink from "next/link";
 import { LogoDarkMode } from "@/components/Logos";
@@ -262,7 +262,8 @@ const Header = ({ isOpenSidebar, setIsOpenSidebar }: any) => {
       {isOpenSidebar && (
         <Sidebar
           data={data}
-          dropDownItems={dropDownItems}
+          values={["framework", "ui", "bolt", "style"]}
+          current={"bolt"}
           setIsOpenSidebar={setIsOpenSidebar}
         />
       )}
