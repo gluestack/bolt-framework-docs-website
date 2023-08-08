@@ -14,7 +14,7 @@ function ArchitectureDiagram() {
           },
         }}
       >
-        <Image src="/assets/Bolt.svg" fill alt="architecture" />
+        <Image src="https://static.gluestack.io/assets/Bolt.svg" fill alt="architecture" />
       </Box>
     </Box>
   );
