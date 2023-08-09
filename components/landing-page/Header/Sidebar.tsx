@@ -151,7 +151,7 @@ function Sidebar({ data, values, current, setIsOpenSidebar }: any) {
                       }}
                       py="$0.5"
                       px="$2.5"
-                      ml="$3"
+                      ml="$1.5"
                       mt="$0.5"
                       borderRadius="$full"
                       borderWidth={2}
